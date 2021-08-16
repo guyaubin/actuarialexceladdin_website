@@ -1,0 +1,100 @@
+verts:
+main: 128045 (darker shadow: 094826, lighter: 124128)
+light couples 1 (dark/lighter): 21a366 / 33c481
+light couples 2 (dark/lighter): 107c41/ 21a366
+light couples 3 (dark/lighter): 185c37/ 107c41
+
+
+
+#444444 : 10
+#4154f1 : 46 -> 128045
+#717ff5 : 1
+#012970 : 34 -> 094826
+#fff : 40
+#8894f6 : 1
+#6776f4 : 1
+#013289 : 4
+#5969f3 : 5
+#f6f9ff: 3
+#0b198f : 1
+#ecf3ff : 1
+#0245bc : 1
+#848484 : 1
+#2db6fa: 2
+#dbf3fe: 1
+#2db6fa : 4
+#f68c09: 4
+#fde3c4: 4
+#08da4e: 4
+#e9222c: 4 red
+#b50edf : 4 purple
+#f51f9c : 4 pink
+#bababa : 2 blanc
+#999 : 1 gris
+#aaaaaa : 3 gris
+#5e5e5e : 1 
+#fafbff : 2 blanc
+#ed3c0d : 1 rouge
+#18d26e : 2 vert
+#4084fd : 1 bleu
+#777777 : 1 gris
+#e6e6e6 : 1 gris
+#0d64fd : 1 bleu
+#013289 : 4 bleu
+#6c757d : 1 gris
+#013ca3 : 1 bleu
+#a0aaf8 : 2 bleu
+#ddd : 1 gris
+#5465f2 : 1 bleu
+#0257ee : 1 bleu
+#d7e6ff : 1 gris
+#a5c5fe : 1 bleu
+#f6f9ff : 3 gris
+#e1ecff : 4 bleu
+#d0d4fc : 1 bleu
+
+rgba(1, 41, 112 : 22
+rgba(127, 137, 161 : 2
+rgba(1, 22, 61 : 1
+rgba(65, 84, 241 : 2
+rgba(255, 255, 255 : 3
+rgba(0, 0, 0 : 4
+
+
+
+body
+
+#4154f1:
+a
+.section-header h2
+.navbar a:hover
+.navbar .active
+.navbar .active:focus
+.navbar li:hover
+.navbar .dropdown ul a:hover
+.navbar .dropdown ul .active:hover
+.navbar .dropdown ul li:hover > a
+
+#717ff5:
+a:hover
+
+#012970:
+.section-header h2
+.header .logo span
+.mobile-nav-toggle
+
+#fff:
+.breadcrumps
+.breadcrumps ol a
+.back-to-top:hover
+.navbar .getstarted:hover
+.mobile-nav-toggle.bi-x
+
+#8894f6:
+.breadcrumbs ol li + li::before
+
+#6776f4:
+.back-to-top:hover (BG)
+
+#013289:
+.navbar a, .navbar a:focus
