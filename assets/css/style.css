@@ -241,7 +241,7 @@ section {
 }
 
 .navbar .getstarted {
-  background: #;
+  background: #128045;
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
@@ -760,156 +760,126 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
+# Free Trial (and Download)
 --------------------------------------------------------------*/
-.services .service-box {
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-  height: 100%;
-  padding: 60px 30px;
-  text-align: center;
+#free-trial {
+  margin-bottom: 200px;
+}
+
+.free-trial {
+  overflow: hidden;
+}
+
+.free-trial .nav-tabs {
+  border: 0;
+}
+
+.free-trial .nav-link {
+  border: 0;
+  padding: 12px 15px;
   transition: 0.3s;
-  border-radius: 5px;
-}
-
-.services .service-box .icon {
-  font-size: 36px;
-  padding: 40px 20px;
-  border-radius: 4px;
-  position: relative;
-  margin-bottom: 25px;
-  display: inline-block;
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.services .service-box h3 {
-  color: #444444;
-  font-weight: 700;
-}
-
-.services .service-box .read-more {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  color: #fff;
+  border-radius: 0;
+  border-right: 2px solid #ffa70f;
   font-weight: 600;
-  font-size: 16px;
-  padding: 8px 20px;
+  font-size: 15px;
 }
 
-.services .service-box .read-more i {
-  line-height: 0;
-  margin-left: 5px;
-  font-size: 18px;
+.free-trial .nav-link:hover {
+  color: #ffa70f;
 }
 
-.services .service-box.blue {
-  border-bottom: 3px solid #2db6fa;
+.free-trial .nav-link.active {
+  color: white;
+  background: #ffa70f;
+  border-color: #ffa70f;
 }
 
-.services .service-box.blue .icon {
-  color: #2db6fa;
-  background: #dbf3fe;
+.free-trial .nav-link:hover {
+  border-color: #ffa70f;
 }
 
-.services .service-box.blue .read-more {
-  color: #2db6fa;
+.free-trial .tab-pane.active {
+  -webkit-animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out;
 }
 
-.services .service-box.blue:hover {
-  background: #2db6fa;
-}
-
-.services .service-box.orange {
-  border-bottom: 3px solid #f68c09;
-}
-
-.services .service-box.orange .icon {
-  color: #f68c09;
-  background: #fde3c4;
-}
-
-.services .service-box.orange .read-more {
-  color: #f68c09;
-}
-
-.services .service-box.orange:hover {
-  background: #f68c09;
-}
-
-.services .service-box.green {
-  border-bottom: 3px solid #08da4e;
-}
-
-.services .service-box.green .icon {
-  color: #08da4e;
-  background: #cffddf;
-}
-
-.services .service-box.green .read-more {
-  color: #08da4e;
-}
-
-.services .service-box.green:hover {
-  background: #08da4e;
-}
-
-.services .service-box.red {
-  border-bottom: 3px solid #e9222c;
-}
-
-.services .service-box.red .icon {
-  color: #e9222c;
-  background: #fef7f8;
-}
-
-.services .service-box.red .read-more {
-  color: #e9222c;
-}
-
-.services .service-box.red:hover {
-  background: #e9222c;
-}
-
-.services .service-box.purple {
-  border-bottom: 3px solid #b50edf;
-}
-
-.services .service-box.purple .icon {
-  color: #b50edf;
-  background: #f8e4fd;
-}
-
-.services .service-box.purple .read-more {
-  color: #b50edf;
-}
-
-.services .service-box.purple:hover {
-  background: #b50edf;
-}
-
-.services .service-box.pink {
-  border-bottom: 3px solid #f51f9c;
-}
-
-.services .service-box.pink .icon {
-  color: #f51f9c;
-  background: #feecf7;
-}
-
-.services .service-box.pink .read-more {
-  color: #f51f9c;
-}
-
-.services .service-box.pink:hover {
-  background: #f51f9c;
-}
-
-.services .service-box:hover h3, .services .service-box:hover p, .services .service-box:hover .read-more {
+.free-trial .details h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
   color: #fff;
 }
 
-.services .service-box:hover .icon {
-  background: #fff;
+.free-trial h2 {
+  color: #fff;
+}
+
+.free-trial .section-title p {
+  color: #bbb;
+}
+
+.free-trial p .instructions a {
+  color: #fff;
+  background: #ffa70f;
+}
+
+.free-trial .details p {
+  color: #bbb;
+}
+
+.free-trial .details p .instructions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.free-trial .details p:last-child {
+  margin-bottom: 0;
+}
+
+.free-trial .btn-get-started {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #ffa70f;
+  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+
+.free-trial .btn-get-started span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.free-trial .btn-get-started i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.free-trial .btn-get-started:hover i {
+  transform: translateX(5px);
+}
+
+.free-trial a {
+  color: #ffa70f;
+  padding: 0 5px 0 5px;
+}
+
+.free-trial a:hover {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .free-trial .nav-link {
+    border: 0;
+    padding: 15px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1376,6 +1346,7 @@ section {
 }
 
 .video .member {
+  margin-bottom: 30px;
   overflow: hidden;
   text-align: center;
   border-radius: 5px;
