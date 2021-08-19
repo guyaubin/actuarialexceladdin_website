@@ -130,7 +130,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #128045;
+  background: #ffa70f; /* #128045; changed by Guy */
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -144,7 +144,7 @@ section {
 }
 
 .back-to-top:hover {
-  background: #6776f4;
+  background: #53e974;
   color: #fff;
 }
 
@@ -1073,7 +1073,7 @@ section {
 
 .faq .faq-list p {
   margin-bottom: 0;
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 30px;
 }
 
 .faq .faq-list .icon-show {
