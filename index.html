@@ -22,6 +22,8 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
@@ -103,7 +105,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img-xx.png" class="img-fluid" alt="">
+          <img src="assets/img/hero-img-butterfly.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -168,7 +170,6 @@
                 <li>Add your own mortality tables and projection scales</li>
                 <li>Canadian statistics for the pension industry updated monthly</li>
                 <li>Annual licensing fee</li>
-                <li>Easy quick-start installation</li>
               </ul>
             </div>
           </div>
@@ -527,7 +528,11 @@
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>System requirements</h3>
                     <p class="fst-italic">To install the addin, you need the following:</p>
-                    <p class="instructions">Excel 2016 or later.</p>
+                    <ul>
+                      <li class="instructions">A PC (not MAC compatible).</li>
+                      <li class="instructions">Excel 2007 or newer.</li>
+                      <li class="instructions">Windows XP, 7, 8, 8.1, 10.</li>
+                    </ul>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="assets/img/free-trial-00.png" alt="" class="img-fluid">
@@ -1072,99 +1077,36 @@
           <p>Frequently Asked Questions</p>
         </header>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <!-- F.A.Q List 1-->
-            <div class="accordion accordion-flush" id="faqlist1">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    What are the requirements to run the addin?
-                  </button>
-                </h2>
-                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    You need an Excel version 2017 or newer with the Windows operating system.
-                  </div>
-                </div>
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is the cost of the Actuarial Excel Addin? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  The Actuarial Excel Addin is sold as an annual licence valid for a single computer, renewable every January 1st. <a id="email" class="email" href="mailto:guyaubin07@gmail.com?subject=Actuarial Excel Addin - License cost">Ask for a quote</a>
+                </p>
               </div>
+            </li>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    Question 3?
-                  </button>
-                </h2>
-                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    ...
-                  </div>
-                </div>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">What are the requirements to run the addin? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  You need a PC (not MAC compatible), Excel 2007 and Windows XP, 7, 8, 8.1 or 10.
+                </p>
               </div>
+            </li>
 
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    Question 5?
-                  </button>
-                </h2>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                  <div class="accordion-body">
-                    ...
-                  </div>
-                </div>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Is the addin Mac compatible? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Unfortunately, not for the moment.  The situation is looked at regularly.
+                </p>
               </div>
+            </li>
 
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-
-            <!-- F.A.Q List 2-->
-            <div class="accordion accordion-flush" id="faqlist2">
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                    Is the addin Mac compatible?
-                  </button>
-                </h2>
-                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    Not for the moment.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
-                    Question 4?
-                  </button>
-                </h2>
-                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    ...
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
-                    Question 6?
-                  </button>
-                </h2>
-                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                  <div class="accordion-body">
-                    ...
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
+          </ul>
         </div>
 
       </div>
