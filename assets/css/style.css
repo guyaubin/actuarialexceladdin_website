@@ -566,40 +566,45 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Video (from the Medicio BootstrapMade template)
+# Tutorials (from the Medicio BootstrapMade template)
 --------------------------------------------------------------*/
-.video .icon-box h4 {
+.tutorials .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 0 15px;
 }
 
-.video .icon-box i {
+.tutorials .icon-box i {
   font-size: 48px;
   float: right;
   color: #ffa70f; /* #185c37; */
 }
 
-.video .icon-box i:hover {
+.tutorials .icon-box i:not(.coming-soon):hover {
   font-size: 55px;
   color: #53e974; 
 }
 
-.video .icon-box p {
+.tutorials .icon-box p {
   font-size: 15px;
   color: rgba(24,92,55,0.75);
   margin-left: 15px;
 }
 
-.video .icon-box .minutes {
+.tutorials .icon-box .minutes {
   font-size: 12px;
   font-style: italic;
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: 0;
-  color: rgba(24,92,55,0.5);
+  color: rgba(24,92,55,1.0);
 }
 
-.video .image {
+.tutorials .icon-box .minutes-soon {
+  color: red;
+}
+
+.tutorials .image {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
