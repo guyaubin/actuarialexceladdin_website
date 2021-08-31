@@ -611,6 +611,12 @@ section {
   min-height: 400px;
 }
 
+#btn-cia-memory-card {
+  background: #ffa70f;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
 /*--------------------------------------------------------------
 # Free Trial (and Download)
 --------------------------------------------------------------*/
