@@ -611,9 +611,11 @@ section {
   min-height: 400px;
 }
 
-#btn-cia-memory-card {
+#btn-cia-cheat-sheet {
   background: #ffa70f;
+  text-align: right;
   padding: 5px 10px;
+  margin: 0;
   border-radius: 6px;
 }
 
