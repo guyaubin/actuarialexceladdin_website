@@ -577,12 +577,12 @@ section {
 .tutorials .icon-box i {
   font-size: 48px;
   float: right;
-  color: #ffa70f; /* #185c37; */
+  color: #185c37;
 }
 
 .tutorials .icon-box i:not(.coming-soon):hover {
-  font-size: 55px;
-  color: #53e974; 
+  font-size: 49px;
+  color: #ffa70f; /* #ffa70f;  #53e974; */
 }
 
 .tutorials .icon-box p {
@@ -605,8 +605,8 @@ section {
 }
 
 .tutorials .image {
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: top center; /* test */
+  background-repeat: repeat-y;
   /* background-size: cover; */
   min-height: 260px;
 }
