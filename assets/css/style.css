@@ -1164,3 +1164,37 @@ section {
 #smarter {
   padding-left: 45px;
 }
+
+/*--------------------------------------------------------------
+# Help (help_on_functions called from the ActuarialExcelAddin)
+--------------------------------------------------------------*/
+
+section.help {
+  padding-top: 20px;
+}
+
+.help {
+  background: #e6eae1;
+}
+.help .help-table {
+  margin: 0;
+  padding: 0 0 0 15px;
+  background-color: #bcc0b8; /* #ffa70f; */
+}
+.help .help-table .help-table-title {
+  font-weight: 600;
+  padding: 3px;
+}
+.help .help-param-required {
+  color: red;
+  font-weight: 500;
+}
+
+.help a {
+  font-size: 36px;
+  color: #53e974;
+}
+
+.help a:hover {
+  color: #ffa70f;
+}

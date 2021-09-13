@@ -1,9 +1,210 @@
-<h1>Actuarial Excel Addin</h1>
-<h3>JS and LX functions</h3>
-<p>The JS function returns the value at Age1 of $1 of pension per year starting at Age1 + Deferred, discounted with interest and mortality and payable:</p>
-<ul>
-    <li>during the annuitant's lifetime or ceasing after a number of years,</li>
-    <li>during the annuitant's lifetime or ceasing after a number of years,</li>
-    <li>with or without a co-annuitant, and</li>
-    <li>with or without indexation.</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>JS and LX</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../vendor/aos/aos.css" rel="stylesheet">
+  <link href="../vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
+  <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
+  <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.4.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>JS and LX functions</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <a href="https://www.actuarialexceladdin.com/#tutorials" target="blank">See the tutorial on Youtube</a>
+
+
+            
+            <p class="mb-0 mt-4">The <strong>JS function</strong> returns the value at Age1 of $1 of pension per year starting at Age1 + Deferred, discounted with interest and mortality and payable:</p>
+            <ul>
+                <li>during the annuitant's lifetime or ceasing after a number of years,</li>
+                <li>with ou without a guaranteed period,</li>
+                <li>with or without a co-annuitant, and</li>
+                <li>with or without indexation.</li>
+            </ul>
+
+            <p>The <strong>LX function</strong> returns a vector of L<sub>x</sub> from age or x = 0 to 120 (years), where L<sub>x</sub> = L<sub>x-1</sub> x p<sub>x-1</sub>.  LX is never used alone, it is always a parameter of one of the following functions: JS, LifeIns, TPX, TQX, getLx, CERTAIN.</p>
+
+            <div class="help-table">
+                <div class="row help-table-title">
+                    <div class="col-2">JS parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Age1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age of annuitant at valuation </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">LX1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">LX(...): annuitant's mortality</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">interest *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Interest rate(s): single rate or vector of rates (rate<sub>1</sub>, duration<sub>1</sub>, ..., rate<sub>n-1</sub>, duration<sub>n-1</sub>, rate<sub>n</sub>)</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Age2</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age of co-annuitant at valuation date</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">LX2</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">LX(...): co-annuitant's mortality</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Reversion</div>
+                    <div class="col-1">0 %</div>
+                    <div class="col-9">% reverting to co-annuitant after annuitant's death</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Guarantee</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Payments guaranteed (in years)</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Deferred</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Deferment of first annuity payment</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Years paid</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Period of payments (in years), <span style="color: red;">by default, ends at age 120</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Indexation</div>
+                    <div class="col-1">0 %</div>
+                    <div class="col-9">Indexation rate(s): single rate or vector of rates (rate<sub>1</sub>, duration<sub>1</sub>, ..., rate<sub>n-1</sub>, duration<sub>n-1</sub>, rate<sub>n</sub>)</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">First age index</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">First age annuity is indexed, <span style="color: red;">by default, starts at Age1 + Deferred + 1</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Frequency</div>
+                    <div class="col-1">12</div>
+                    <div class="col-9">Number of payments per year</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Due</div>
+                    <div class="col-1">True</div>
+                    <div class="col-9">False: first payment further deferred by 1/Frequency (in years)</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Qx-pre</div>
+                    <div class="col-1">True</div>
+                    <div class="col-9">True: Mortality during deferment period <span style="color: red;">(on annuitant only)</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Certain reduced</div>
+                    <div class="col-1">False</div>
+                    <div class="col-9">True: Guaranteed pension reduced after annuitant's death <span style="color: red;">as per 'Reversion'</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Percentage married</div>
+                    <div class="col-1">100 %</div>
+                    <div class="col-9">% married at retirement <span style="color: red;">, used in conjunction with 'Reversion' and 'Guarantee'</span></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-table">
+                <div class="row help-table-title">
+                    <div class="col-2">LX parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Sex *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">1: Male q<sub>x</sub>, 2: Female q<sub>x</sub>, 1.75: 75% Female+ 25% Male, etc.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Qx table</div>
+                    <div class="col-1">UP94ICA</div>
+                    <div class="col-9">Mortality table</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Age move</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Age shift for the mortality table (+ means older, - means younger)</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Load</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Loading (q<sub>x-loaded</sub> = q<sub>x</sub> x (1 + load))</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Projection</div>
+                    <div class="col-1">False</div>
+                    <div class="col-9">True: With mortality projection</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Projection scale</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">.....</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Projection base year</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Base year of the mortality table, e.g. 2014 for the CPM2014</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Year of valuation</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">.....</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Age at valuation</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">.....</div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+</body>
+
+</html>
