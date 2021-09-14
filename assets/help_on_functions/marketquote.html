@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MarketQuote</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>MarketQuote function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <a href="../../#tutorials" target="blank">See the tutorial on Youtube</a>
+
+            <p>The <span class="highlight">MarketQuote function</span> returns the month-end financial markets indices at 
+                month-end (exchange rates, Canadian T-Bills and bonds and stocks).  Any date in a given month will return the same value.</p>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Date *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">.....</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Code</div>
+                    <div class="col-1">1</div>
+                    <div class="col-9">See table below</div>
+                </div>
+            </div>
+<br>
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-1">Code</div>
+                    <div class="col-5">Description</div>
+                    <div class="col-6">From</div>
+                </div>
+                <div class="row"><div class="col-1">1</div><div class="col-5">$CAN / $US (source: Bank of Canada)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">2</div><div class="col-5">$CAN / Euro (source: Bank of Canada)</div><div class="col-6">1991-Jan</div></div>
+                <div class="row"><div class="col-1">3</div><div class="col-5">$CAN / $US (source: MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">4</div><div class="col-5">$US / $CAN (source: MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">5</div><div class="col-5">S&P/TSX</div><div class="col-6">1919-Jan</div></div>
+                <div class="row"><div class="col-1">6</div><div class="col-5">S&P/TSX total return</div><div class="col-6">1956-Jan</div></div>
+                <div class="row"><div class="col-1">7</div><div class="col-5">S&P 500</div><div class="col-6">1989-Sep</div></div>
+                <div class="row"><div class="col-1">8</div><div class="col-5">S&P 500 total return</div><div class="col-6">1989-Sep</div></div>
+                <div class="row"><div class="col-1">9</div><div class="col-5">Short bonds (FTSE Russel)</div><div class="col-6">1979-Dec</div></div>
+                <div class="row"><div class="col-1">10</div><div class="col-5">Mid bonds (FTSE Russel)</div><div class="col-6">1979-Dec</div></div>
+                <div class="row"><div class="col-1">11</div><div class="col-5">Long bonds (FTSE Russel)</div><div class="col-6">1979-Dec</div></div>
+                <div class="row"><div class="col-1">12</div><div class="col-5">Universe bonds (FTSE Russel)</div><div class="col-6">1979-Dec</div></div>
+                <div class="row"><div class="col-1">13</div><div class="col-5">Real return bonds (FTSE Russel)</div><div class="col-6">1991-Dec</div></div>
+                <div class="row"><div class="col-1">14</div><div class="col-5">91-day Tbills (FTSE Russel)</div><div class="col-6">1979-Dec</div></div>
+                <div class="row"><div class="col-1">15</div><div class="col-5">World ($US, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">16</div><div class="col-5">World ex. USA ($US, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">17</div><div class="col-5">EAFE ($US, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">18</div><div class="col-5">Europe ($US, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">19</div><div class="col-5">Pacific ($US, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">20</div><div class="col-5">Emerging markets ($US, MSCI)</div><div class="col-6">2000-Dec</div></div>
+                <div class="row"><div class="col-1">21</div><div class="col-5">Canada ($CAN, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">22</div><div class="col-5">Canada ($US, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">23</div><div class="col-5">USA ($US, MSCI)</div><div class="col-6">1969-Dec</div></div>
+                <div class="row"><div class="col-1">24</div><div class="col-5">BRIC ($US, MSCI)</div><div class="col-6">2012-Jan</div></div>
+                <div class="row"><div class="col-1">25</div><div class="col-5">World ex. Canada ($US, MSCI)</div><div class="col-6">2012-Oct</div></div>
+                <div class="row"><div class="col-1">26</div><div class="col-5">World Small Cap ($US, MSCI)</div><div class="col-6">2013-May</div></div>
+                <div class="row"><div class="col-1">27</div><div class="col-5">World (local currency, MSCI)</div><div class="col-6">2015-May</div></div>
+                <div class="row"><div class="col-1">28</div><div class="col-5">30-day Tbills (FTSE Russel)</div><div class="col-6">2018-Dec</div></div>
+                <div class="row"><div class="col-1">29</div><div class="col-5">60-day Tbills (FTSE Russel)</div><div class="col-6">2018-Dec</div></div>
+                <div class="row"><div class="col-1">30</div><div class="col-5">182-day TB (FTSE Russel)</div><div class="col-6">2018-Dec</div></div>
+                <div class="row"><div class="col-1">31</div><div class="col-5">365-day TB (FTSE Russel)</div><div class="col-6">2018-Dec</div></div>
+                
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

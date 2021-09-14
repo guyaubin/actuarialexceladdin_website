@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>LX</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>LX function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <a href="../../#tutorials" target="blank">See the tutorial on Youtube</a>
+
+            <p class="mb-2">The <span class="highlight">LX function</span> returns a vector of L<sub>x</sub> from age or x = 0 to 120 (years), where L<sub>x</sub> = L<sub>x-1</sub> x p<sub>x-1</sub> = L<sub>x-1</sub> x (1 - q<sub>x-1</sub>).</p>
+            <p class="function-definition mt-0">The <span class="highlight">LX function</span> is never used alone, it is always a parameter of one of the following functions: 
+                <a href="js.html" target="_blank">JS</a>, LifeIns, TPX, TQX, getLx, CERTAIN.</p>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Sex *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">1: Male q<sub>x</sub>, 2: Female q<sub>x</sub>, 1.75: 75% Female+ 25% Male, etc.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Qx table</div>
+                    <div class="col-1">UP94ICA</div>
+                    <div class="col-9"><a href="tables_and_scales.html" target="_blank">Mortality table</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Age move</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Age shift for the mortality table (+ means older, - means younger)</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Load</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Loading (q<sub>x-loaded</sub> = q<sub>x</sub> x (1 + load))</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Projection</div>
+                    <div class="col-1">False</div>
+                    <div class="col-9">True: With mortality projection</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Projection scale</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9"><a href="tables_and_scales.html" target="_blank">Projection scale</a> <span class="note">(must be set when 'Projection' is True)</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Projection base year</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Base year of the mortality table, e.g. 2014 for the CPM2014 <span class="note">(must be set when 'Projection' is True)</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Year of valuation</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">..... <span class="note">(must be set when 'Projection' is True)</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Age at valuation</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">..... <span class="note">(must be set to use 2D projection scale, 0 or empty otherwise)</span></div>
+                </div>
+            </div>
+            <br>
+            <p>A <strong>1D projection scale</strong> contains the yearly mortality improvement 
+                rate for each mortality rate (i.e. one improvement rate for each age of the mortality table).
+                The number of years of projection is equal to 'Year of valuation' minus 'Projection base year'.</p>
+            <p>A <strong>2D projection scale</strong> contains the mortality improvement for each age of the mortality table and for each year
+                    (i.e. multiple improvement rates for each age of the mortality table).</p>
+
+        </div>
+    </section>
+</body>
+
+</html>

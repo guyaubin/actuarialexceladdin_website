@@ -1183,11 +1183,15 @@ section.help {
 }
 .help .help-table .help-table-title {
   font-weight: 600;
-  padding: 3px;
+  font-size: 110%;
+}
+
+.help .help-required {
+  color: #185c37;
 }
 .help .help-param-required {
-  color: red;
-  font-weight: 500;
+  color: #185c37;
+  font-weight: 600;
 }
 
 .help a {
@@ -1197,4 +1201,66 @@ section.help {
 
 .help a:hover {
   color: #ffa70f;
+}
+
+.help p.function-definition a,
+.help div.function-definition a {
+  font-size: inherit;
+  color: blue;
+  text-decoration: underline;
+}
+
+.help p.function-definition a:hover,
+.help div.function-definition a:hover {
+  font-weight: 600;
+}
+.help dl {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.help dl.left-margin,
+.help p.left-margin  {
+  margin: 35px;
+}
+.help dt {
+  float: left;
+  width: 15%;
+  /* adjust the width; make sure the total of both is 100% */
+  padding: 0;
+  margin: 0;
+}
+.help dd {
+  float: left;
+  width: 85%;
+  /* adjust the width; make sure the total of both is 100% */
+  padding: 0;
+  margin: 0;
+}
+
+.help .note {
+  font-size: smaller;
+  color: #666;
+}
+
+.help .blue {
+  color: blue;
+  text-align: center;
+}
+
+.help .blue-footnote {
+  color: blue;
+  margin-bottom: 0;
+}
+
+.help .highlight {
+  color: #333;
+  font-weight: 600;
+}
+
+.help .right {
+  text-align: right;
+  font-size: 90%;
+  font-style: italic;
 }

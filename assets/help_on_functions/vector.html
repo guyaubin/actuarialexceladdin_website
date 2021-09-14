@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>vector</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container function-definition">
+            <div class="row">
+                <div class="col"><h1>Vector of rates</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p>A <span class="highlight">vector of rates</span> (either interest or indexation) is composed of an <span class="highlight">odd number of contiguous worksheet cells</span> (horizontal or vertical).  The cells must contain:</p>
+            <dl>
+                <dt>Cell<sub>1</sub>:</dt><dd>an annual rate, effective from <span class="highlight">time-0</span> to ...</dd>
+                <dt>Cell<sub>2</sub>:</dt><dd>the effective period of the previous rate (in years, fraction accepted)</dd>
+                <dt>.....</dt><dd>.....</dd>
+                <dt>Cell<sub>N-2</sub>:</dt><dd>an annual rate</dd>
+                <dt>Cell<sub>N-1</sub>:</dt><dd>the effective period of the previous rate (in years, fraction accepted)</dd>
+                <dt>Cell<sub>N</sub>:</dt><dd>the ultimate annual rate</dd>
+            </dl>
+
+            <br>
+            <p><span class="highlight">Time-0</span> is the valuation date.  In the <a href="js.html" target="_blank">JS function</a>:</p>
+            <ul>
+                <li><span class="highlight">time-0</span> coincides with <span class="highlight">Age1</span> both for interest and indexation rates,</li>
+                <li>indexation will only be included after <span class="highlight">First age index</span> (by default Age1 + Deferred + 1).</li>
+            </ul>
+            <p>For ease of use in the various Excel formulas, the range of cells from <span class="highlight">Cell<sub>1</sub> to Cell<sub>N</sub></span> can be contained in a <a href="https://www.dummies.com/software/microsoft-office/excel/using-named-ranges-in-excel-formulas/" target="_blank">named range</a>.</p>
+
+            <div class="help-table">
+                <p><span class="highlight">Example:</span> 3.25% per year for the first 5.25 years, then 2.5% per year during the next 4.75 years and 1% per year thereafter.</p>
+                <dl>
+                    <dt>Cell<sub>1</sub>:</dt><dd>3.25%</dd>
+                    <dt>Cell<sub>2</sub>:</dt><dd>5.25</dd>
+                    <dt>Cell<sub>3</sub>:</dt><dd>2.50%</dd>
+                    <dt>Cell<sub>4</sub>:</dt><dd>4.75</dd>
+                    <dt>Cell<sub>5</sub>:</dt><dd>1%</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
