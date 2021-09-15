@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EligDate</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>EligDate function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">EligDate function</span>, returns the first date 
+                where a set of conditions are met (e.g. minimum age, minimum service or minimum age + service).</p>
+            
+            <p>EligDate is used when you have all the dates, e.g. date of birth, date of hire, date of membership.</p>
+
+            <p class="function-definition">See also <a href="eligdate2.html" target="_blank">EligDate2</a>, when you have the age and service at a given date.</p>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Date 1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">e.g. date of birth</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Min 1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9"><span class="highlight">First criteria</span>: Minimum duration elapsed after Date 1 (in years), <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Date 2</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">e.g. date of hire or date joined plan</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Min 2</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9"><span class="highlight">Second criteria</span>: Minimum duration elapsed after Date 2 (in years), <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Min 1-2</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9"><span class="highlight">Third criteria</span>: Minimum sum of duration elapsed since Date 1 and Date 2 (in years), <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">MeetAll</div>
+                    <div class="col-1">False</div>
+                    <div class="col-9">True: Must meet all three criterias - False: Must meet any of the criteria</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">NextMonth</div>
+                    <div class="col-1">True</div>
+                    <div class="col-9">If date is not 1<sup>st</sup> of the month, return next 1<sup>st</sup> of the month</span></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-table">
+                <p><span class="highlight">Example #1:</span> Normal retirement at age 60 (next 1<sup>st</sup> of the month) for a person born on July 15, 1979:</p>
+                <p>Date1 = date(1979, 7, 15)</p>
+                <p>Eligdate(Date1, 60) = 2039-08-01
+            </div>
+
+            <br>
+            <div class="help-table">
+                <p><span class="highlight">Example #2:</span> Unreduced early retirement when the following conditions are met:</p>
+                <ol>
+                    <li>Minimum 55 years of age</li>
+                    <li>Minimum 30 years of service</li>
+                    <li>Minimum age + service is 90 years</li>
+                </ol>
+
+                <p>Date1 = date(1979, 7, 15)</p>
+                <p>Date2 = date(2006, 11, 28)</p>
+                <p>Eligdate(Date1, 55, Date2, 30, 90, True, True) = 2038-04-01
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
