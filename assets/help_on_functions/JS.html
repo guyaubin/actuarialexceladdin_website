@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-2 help-param-required">Age1 *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Age of annuitant at valuation </div>
+                    <div class="col-9">Age of annuitant at valuation, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2 help-param-required">LX1 *</div>
@@ -67,7 +67,7 @@
                 <div class="row">
                     <div class="col-2">Age2</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Age of co-annuitant at valuation date</div>
+                    <div class="col-9">Age of co-annuitant at valuation date, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2">LX2</div>
@@ -82,17 +82,17 @@
                 <div class="row">
                     <div class="col-2">Guarantee</div>
                     <div class="col-1">0</div>
-                    <div class="col-9">Payments guaranteed (in years)</div>
+                    <div class="col-9">Payments guaranteed (in years), <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2">Deferred</div>
                     <div class="col-1">0</div>
-                    <div class="col-9">Deferment of first annuity payment</div>
+                    <div class="col-9">Deferment of first annuity payment, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2">Years paid</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Period of payments (in years), <span class="highlight">by default, ends at age 120</span></div>
+                    <div class="col-9">Period of payments (in years), <span class="highlight">by default, ends at age 120</span>, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2">Indexation</div>
@@ -102,12 +102,12 @@
                 <div class="row">
                     <div class="col-2">First age index</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">First age annuity is indexed, <span class="highlight">by default, starts at Age1 + Deferred + 1</span></div>
+                    <div class="col-9">First age annuity is indexed, <span class="highlight">by default, starts at Age1 + Deferred + 1</span>, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2">Frequency</div>
                     <div class="col-1">12</div>
-                    <div class="col-9">Number of payments per year</div>
+                    <div class="col-9">Number of payments per year, <span class="note">must be an integer, e.g.: 1, 12, 24, 26, 52</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2">Due</div>

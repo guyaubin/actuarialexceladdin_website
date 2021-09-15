@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TQX</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>TQX function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">TQX function</span>, from the <sub>t</sub>q<sub>x</sub> actuarial 
+                function (where <sub>t</sub>q<sub>x</sub> = 1 - <sub>t</sub>p<sub>x</sub> = 1 - l<sub>x+t</sub> / l<sub>x</sub>), returns the 
+                <span class="highlight">probability of death between Age and Age + NbYears</span>.</p>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Age *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">....., <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Lx *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9"><a href="lx.html" target="_blank">LX function</a>: mortality</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Nb years</div>
+                    <div class="col-1">1</div>
+                    <div class="col-9">Number of years, <span class="note">fraction allowed</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>weights vector</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container function-definition">
+            <div class="row">
+                <div class="col"><h1>Weights vector</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+            <h4 class="mb-5">as a parameter of the LifeIns function</h4>
+
+            <p>A <span class="highlight">weights vector</span> is composed of <span class="highlight">contiguous 
+                worksheet cells</span> (horizontal or vertical).  Each cell contains a one-year 
+                weight starting at <span class="highlight">AgeIns</span>.  The last weight is used until the end of 
+                the insurance coverage period.</p>
+            
+            <p>For ease of use in the various Excel formulas, the range of cells can be contained in a <a href="https://www.dummies.com/software/microsoft-office/excel/using-named-ranges-in-excel-formulas/" target="_blank">named range</a>.</p>
+
+            <br>
+            <div class="help-table">
+                <p><span class="highlight">Example #1:</span> 100% insurance coverage for the first 5 years, 50% thereafter.</p>
+                <dl>
+                    <dt>Cells<sub>1 to 5</sub>:</dt><dd>100%</dd>
+                    <dt>Cell<sub>6</sub>:</dt><dd>50%</dd>
+                </dl>
+            </div>
+
+            <br>
+            <div class="help-table">
+                <p><span class="highlight">Example #2:</span> Insurance coverage declining by 10% each year until it reaches a 50% coverage.</p>
+                <dl>
+                    <dt>Cell<sub>1</sub>:</dt><dd>100%</dd>
+                    <dt>Cell<sub>2</sub>:</dt><dd>90%</dd>
+                    <dt>Cell<sub>3</sub>:</dt><dd>80%</dd>
+                    <dt>Cell<sub>4</sub>:</dt><dd>70%</dd>
+                    <dt>Cell<sub>5</sub>:</dt><dd>60%</dd>
+                    <dt>Cell<sub>6</sub>:</dt><dd>50%</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

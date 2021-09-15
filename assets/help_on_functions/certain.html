@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CERTAIN</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>CERTAIN function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mb-0 mt-4">The <span class="highlight">CERTAIN function</span> returns the value at time = 0 of 
+                an <span class="highlight">annuity certain</span> paying $1 per year during <span class="highlight">Duration</span> year(s)
+                starting at <span class="highlight">Deferred</span>, discounted with interest and payable:</p>
+            <ul>
+                <li>with or without indexation, and</li>
+                <li>with or without reduction after a contigent annuitant's death.</li>
+            </ul>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Interest *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Interest rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required"">Duration *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Period of payments (in years), <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Deferred</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Deferment of first annuity payment, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Freq</div>
+                    <div class="col-1">12</div>
+                    <div class="col-9">Number of payments per year, <span class="note">must be an integer, e.g.: 1, 12, 24, 26, 52</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Due</div>
+                    <div class="col-1">True</div>
+                    <div class="col-9">False: first payment further deferred by 1/Freq (in years)</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Indexation</div>
+                    <div class="col-1">0 %</div>
+                    <div class="col-9">Indexation rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">FirstDurIndex</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Period after which indexation starts, <span class="highlight">by default, starts at Deferred + 1</span>, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Certain reduced</div>
+                    <div class="col-1">False</div>
+                    <div class="col-9">True: Guaranteed pension reduced after contingent annuitant's death <span class="highlight">as per 'Reversion'</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Age</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age of contingent annuitant at valuation, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Reversion</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Reduced annuity after the contingent annuitant's death, e.g. 0,6 or 60%</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Lx</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9"><a href="lx.html" target="_blank">LX function</a>: contingent annuitant's mortality</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
