@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BestAverageEarnings</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>BestAverageEarnings function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">BestAverageEarnings function</span>, returns the <span class="highlight">NbYears</span> average 
+                of best earnings from the <span class="highlight">Earnings history</span>.  If <span class="highlight">Service history</span> is provided, annualized earnings are first ranked, then 
+                weighted according to their respective service.  Sum of service and corresponding earnings are considered up to <span class="highlight">NbYears</span>.</p>
+
+            <p>If <span class="highlight">OutOf</span> is provided, then only the first <span class="highlight">OutOf</span> elements of Earnings history and Service history are used.</p>
+
+            <p class="function-definition">See also <a href="BestConsecutiveAverageEarnings.html" target="_blank">BestConsecutiveAverageEarnings</a>.</p>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">NbYears *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Number of years of earnings included in the average, <span class="note">must be an integer</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">OutOf</div>
+                    <div class="col-1">99</div>
+                    <div class="col-9">Number of years considered, <span class="note">must be an integer</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Earnings history *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Range of cells (contiguous) containing the earnings history from most recent to oldest.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Service history</div>
+                    <div class="col-1">1, 1, 1, ...</div>
+                    <div class="col-9">Range of cells (contiguous) containing the service history from most recent to oldest.  Each cell must contain a value from 0 to 1.</div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-table">
+                <p><span class="highlight">Example #1:</span> No Service history</p>
+                <p>NbYears = 5</p>
+                <p>Earnings history = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                <p>BestAverageEarnings(NbYears, , Earnings history) = 53835.70</p>
+            </div>
+
+            <br>
+            <div class="help-table">
+                <p><span class="highlight">Example #2:</span> With Service history</p>
+                <p>NbYears = 5</p>
+                <p>Earnings history = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                <p>Service history = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
+                <p>BestAverageEarnings(NbYears, , Earnings history, Service history) = 55261.66</p>
+            </div>
+
+            <br>
+            <div class="help-table">
+                <p><span class="highlight">Example #3:</span> With Service history and OutOf</p>
+                <p>NbYears = 5</p>
+                <p>OutOf = 7</p>
+                <p>Earnings history = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                <p>Service history = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
+                <p>BestAverageEarnings(NbYears, OutOf, Earnings history, Service history) = 43296.14</p>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
