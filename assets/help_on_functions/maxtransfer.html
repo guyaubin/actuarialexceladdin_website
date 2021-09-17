@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MaxTransfer</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>MaxTransfer function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5 function-definition">The <span class="highlight">MaxTransfer function</span>, returns the factor 
+                to calculate the maximum amount that may be transferred to an RRSP, RRIF, or MP provision 
+                from a DB provision of an RPP as per 
+                <a href="https://www.canada.ca/en/revenue-agency/services/tax/registered-plans-administrators/registered-plans-directorate-technical-manual-19.html">paragraph 8517 
+                    of the Canada Income Tax Regulation</a>.</p>
+            
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Age *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age at the date of the transfer, <span class="note">fraction allowed</span></a></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6">The member has 45 years of age at the date of transfer.</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Age = 45</p>
+                        <p class="help-example-answer">MaxTransfer(Age) returns 9.0</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6">The member has 60.8 years of age at the date of transfer.</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Age = 60.8</p>
+                        <p class="help-example-answer">MaxTransfer(Age) returns 11.66</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

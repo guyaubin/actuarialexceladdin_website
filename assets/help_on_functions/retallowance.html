@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RetAllowance</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>RetAllowance function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5 function-definition">The <span class="highlight">RetAllowance function</span>, returns, for employees 
+                with years of service before 1996, the portion of a retiring allowance that they may be able to directly transfer 
+                to a registered pension plan (RPP) or a registered retirement savings plan (RRSP) as per 
+                <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/completing-filing-information-returns/t4-information-employers/special-situations/transfer-a-retiring-allowance.html">paragraph 60.j.1 of the Canada Income Tax Act</a>
+                .</p>
+            
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-3">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-8">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">Date of hire *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">.....</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">Date of termination *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">Date of termination of employment</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">Date of membership *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">Date of membership in the pension plan of the employer</a></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6">An employee terminates his employment on Jan.1, 2021. 
+                        He was hired on July 1, 1991 and joined the employer's pension plan on July 1, 1992.  How much 
+                        of his retiring allowance can he transfer to his RRSP?</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Date_of_hire = date(1991, 7, 1)</p>
+                        <p>Date_of_membership = date(1992, 7, 1)</p>
+                        <p>Date_of_termination = date(2021, 1, 1)</p>
+                        <p class="help-example-answer">RetAllowance(Date_of_hire, Date_of_termination, Date_of_membership) returns 10000</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6">An employee terminates his employment on Jan.1, 2021. 
+                        He was hired on July 1, 1985 and joined the employer's pension plan on July 1, 1987.  How much 
+                        of his retiring allowance can he transfer to his RRSP?</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Date_of_hire = date(1985, 7, 1)</p>
+                        <p>Date_of_membership = date(1987, 7, 1)</p>
+                        <p>Date_of_termination = date(2021, 1, 1)</p>
+                        <p class="help-example-answer">RetAllowance(Date_of_hire, Date_of_termination, Date_of_membership) returns 25000</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

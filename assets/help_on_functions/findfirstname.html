@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FindFirstName</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>FindFirstName function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">FindFirstName function</span>, returns the first name of a person.</p>
+
+            <p class="function-definition">See also <a href="findlastname.html" target="_blank">FindLastName</a>,
+                <a href="invname.html" target="_blank">InvName</a>.</p>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Name *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Full name with last name first then a separator then the first name</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Separator</div>
+                    <div class="col-1">,</div>
+                    <div class="col-9">the character(s) separating the firstname and lastname</div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6"><span class="highlight">Default separator (i.e. the comma)</span></div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Name = "Doe, John"</p>
+                        <p class="help-example-answer">FindFirstName(Name) returns "John"</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6"><span class="highlight">Special separator</span></div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Name = "Doe :: John"</p>
+                        <p>Separator = "::"</p>
+                        <p class="help-example-answer">FindFirstName(Name, Separator) returns "John"</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vt</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>Vt function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">Vt function</span>, from the actuarial 
+                notation v<sup>t</sup>, is the discounted value at time 0 of $1 payable in <span class="highlight">t</span> years.</p>
+            
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Interest *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Interest rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Duration *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Duration in years, <span class="note">fraction allowed</span></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6"><span class="highlight">Single interest rate:</span> Discounted value at time 0 of $1 payable in 3.33 years if
+                        interest rate is 3.25% per year</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Interest = 3.25%</p>
+                        <p>Duration = 3.33</p>
+                        <p class="help-example-answer">Vt(Interest, Duration) returns 0.898972</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6"><span class="highlight">Multiple interest rates:</span> Discounted value at time 0 of $1 payable in 8.33 years if
+                        interest rates are: 3.25% per year for the first 5.25 years and 4% per year thereafter</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Interest = (3.25%, 5.25, 4%)</p>
+                        <p>Duration = 8.33</p>
+                        <p class="help-example-answer">Vt(Interest, Duration) returns 0.749229</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

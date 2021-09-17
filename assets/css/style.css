@@ -430,7 +430,7 @@ section {
 
 .hero h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   color: #094826;
 }
@@ -521,9 +521,9 @@ section {
 
 .about h3 {
   padding-top: 30px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  color: #128045;
+  color: #000; /* #128045; */
   text-transform: uppercase;
 }
 
@@ -1176,22 +1176,60 @@ section.help {
 .help {
   background: #e6eae1;
 }
+
+.help .help-example {
+  margin: 0;
+  padding: 0 0 0 15px;
+  background-color: #ccf7c8;
+}
+
+.help .help-muted {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.help .help-example .help-example-title {
+  margin-bottom: 20px;
+}
+
+.help .help-example .help-example-title p,
+.help .help-example .help-example-title dl,
+.help .help-example .help-example-title ol {
+  margin-bottom: 0;
+}
+
+.help .help-example .help-example-line p {
+  margin: 0 0 0 0;
+  font-size:85%;
+}
+
+.help .help-example-answer {
+  font-size: 95%;
+  font-weight: 600;
+}
+
+.help .help-example .help-example-line p::first-line {
+  margin-top: 20px;
+}
+
 .help .help-table {
   margin: 0;
   padding: 0 0 0 15px;
-  background-color: #bcc0b8; /* #ffa70f; */
+  background-color: #bcc0b8;
 }
 .help .help-table .help-table-title {
   font-weight: 600;
-  font-size: 110%;
+  font-size: 130%;
+  font-family: "Nunito", sans-serif;
+  color: #185c37;
 }
 
 .help .help-required {
   color: #185c37;
 }
 .help .help-param-required {
-  color: #185c37;
-  font-weight: 700;
+  /* color: #185c37; */
+  font-weight: 600;
 }
 
 .help a {

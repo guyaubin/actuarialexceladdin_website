@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AverageSal</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col-8"><h2>AverageSal function</h2></div>
+                <div class="col-4 text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">AverageSal function</span>, returns the <span class="highlight">projected final average</span> earnings at AgeFut.</p>
+           
+            <p class="function-definition">See also <a href="BestAverageEarnings.html" target="_blank">BestAverageEarnings</a> and 
+                <a href="BestConsecutiveAverageEarnings.html" target="_blank">BestConsecutiveAverageEarnings</a>
+                for average earnings using earnings past history only.</p>
+
+            <p class="help-required">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Salary *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Salary at time-0 (increased yearly thereafter)</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Increase *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Annual salary increase rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Age *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age at time-0, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">AgeFut *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age in the future when average salary is calculated, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">NbYears *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Number of years of earnings included in the average, <span class="note">must be an integer</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">SalHist</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Range of cells (contiguous) containing the earnings history from most recent to oldest.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">PartHist</div>
+                    <div class="col-1">1, 1, 1, ...</div>
+                    <div class="col-9">Range of cells (contiguous) containing the service history from most recent to oldest.  Each cell must contain a value from 0 to 1.</div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6"><span class="highlight">Retirement in distant future (i.e. > NbYears)</span>
+                        <p>In such a case, past earnings history is not used.</p>
+                    </div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Salary = 50000</p>
+                        <p>Increase = 1%</p>
+                        <p>Age = 50</p>
+                        <p>AgeFut = 65</p>
+                        <p>NbYears = 5</p>
+                        <p class="help-muted">SalHist = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                        <p class="help-muted">PartHist = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
+                        <p class="help-example-answer">AverageSal(Salary, Increase, Age, AgeFut, NbYears, <span class="help-muted">SalHist, PartHist</span>) returns 56346.83</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6"><span class="highlight">Retirement in near future (i.e. < NbYears)</span>
+                        <p>If available, past earnings history is used.  If not, earnings are projected backward using Increase (the first element of the vector if applicable).</p>
+                    </div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Salary = 50000</p>
+                        <p>Increase = 1%</p>
+                        <p>Age = 62.5</p>
+                        <p>AgeFut = 65</p>
+                        <p>NbYears = 5</p>
+                        <p>SalHist = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                        <p>PartHist = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
+                        <p class="help-example-answer">AverageSal(Salary, Increase, Age, AgeFut, NbYears, SalHist, PartHist) returns 47329.22</p>
+                        <br>
+                        <p>Note that if SalHist is not provided, the result is: 49757.40.</p>
+                        <p>Note that if PartHist is not provided, the result is: 46724.84.</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #3</span></div>
+                    <div class="col-6"><span class="highlight">Retirement in near future (i.e. < NbYears), short past history available</span>
+                        <p>If such a case, the average is calculated over future years plus available past years.</p>
+                    </div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Salary = 50000</p>
+                        <p>Increase = 1%</p>
+                        <p>Age = 62.5</p>
+                        <p>AgeFut = 65</p>
+                        <p>NbYears = 5</p>
+                        <p>SalHist = [42750, 0, 0, 0, 0, 0, 0, 0]</p>
+                        <p>PartHist = [0.95, 0, 0, 0, 0, 0, 0, 0]</p>
+                        <p class="help-example-answer">AverageSal(Salary, Increase, Age, AgeFut, NbYears, SalHist, PartHist) returns 48913.77</p>
+                        <br>
+                        <p>Note that if PartHist is not provided, the result is: 48215.00.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

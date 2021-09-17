@@ -88,24 +88,44 @@
             </div>
 
             <br>
-            <div class="help-table">
-                <p><span class="highlight">Example #1:</span> Normal retirement at age 60 (next 1<sup>st</sup> of the month)</p>
-                <p>On December 31, 2020, the member has 41.46 years of age.</p>
-                <p>DateNow = date(2020, 12, 31)</p>
-                <p>Eligdate2(DateNow, 41.46, 60) = 2039-08-01
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6">
+                        <p>Normal retirement at age 60 (next 1<sup>st</sup> of the month).</p>
+                        <p>On December 31, 2020, the member has 41.46 years of age.</p>
+                    </div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>DateNow = date(2020, 12, 31)</p>
+                        <p class="help-example-answer">Eligdate2(DateNow, 41.46, 60) returns 2039-08-01
+                    </div>
+                </div>
             </div>
 
             <br>
-            <div class="help-table">
-                <p><span class="highlight">Example #2:</span> Unreduced early retirement when the following conditions are met:</p>
-                <ol>
-                    <li>Minimum 55 years of age</li>
-                    <li>Minimum 30 years of service</li>
-                    <li>Minimum age + service is 90 years</li>
-                </ol>
-                <p>On December 31, 2020, the member has 41.46 years of age and 14.09 years of service.</p>
-                <p>DateNow = date(2020, 12, 31)</p>
-                <p>Eligdate2(DateNow, 41.46, 55, 14.09, 30, 90, True, True) = 2038-04-01
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6">
+                        <p>Unreduced early retirement when the following conditions are met:</p>
+                        <ol>
+                            <li>Minimum 55 years of age</li>
+                            <li>Minimum 30 years of service</li>
+                            <li>Minimum age + service is 90 years</li>
+                        </ol>
+                        <p>On December 31, 2020, the member has 41.46 years of age and 14.09 years of service.</p>
+                    </div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>DateNow = date(2020, 12, 31)</p>
+                        <p class="help-example-answer">Eligdate2(DateNow, 41.46, 55, 14.09, 30, 90, True, True) returns 2038-04-01
+                    </div>
+                </div>
             </div>
 
         </div>

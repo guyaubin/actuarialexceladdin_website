@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SumContrib</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>SumContrib function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mb-0 mt-4">The <span class="highlight">SumContrib function</span> returns the value at Age2 of the 
+                contributions made from Age1 to Age2 accumulated with interest until Age2 according to the given 
+                contribution formula and the initial contributions.</p>
+
+            <p class="function-definition mt-4">See also: <a href="pvsal.html" target="_blank">PVSal</a></p>
+
+            <p class="help-required mt-4">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Age1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age at time-0, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Age2 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Age at which we want to accumulate the contributions with interest, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Contribution rate 1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Rate of contributions on the salary.  If <span class="highlight">Contribution rate 2</span> is > 0, 
+                        then <span class="highlight">Contribution rate 1</span> is only applied on the portion of the salary lower than the <span class="highlight">YMPE</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Salary *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Salary payable from Age1 to Age1 + 1</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Salary increases *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Salary increases rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Interest *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Interest rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Contribution rate 2</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Rate of contributions on the portion of salary in excess of the YMPE</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">YMPE</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">YMPE payable from Age1 to Age1 + 1</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">YMPE increases</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">YMPE increases rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Starting contributions</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Contributions accumulated with interests at Age1</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">InterestFirstYear</div>
+                    <div class="col-1">0.5</div>
+                    <div class="col-9">Interest on new contributions for the year in which contributed (from 0 to 1)</div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6"><span class="highlight">Accumulated contributions from age 50 to 65, 
+                        with a contribution formula of 3% of earnings up to the YMPE plus 5% of earnings exceeding the YMPE.</span></div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Age1 = 50</p>
+                        <p>Age2 = 65</p>
+                        <p>ContrRate1 = 3%</p>
+                        <p>Salary = 75000</p>
+                        <p>SalIncr = {0.75%, 5, 2%}</p>
+                        <p>Interest = {2%, 6, 4%}</p>
+                        <p>ContrRate2 = 5%</p>
+                        <p>YMPE = 61600</p>
+                        <p>YMPEIncr = {1%, 5, 2%}</p>
+                        <p>StartContr = 25000</p>
+                        <p class="help-example-answer">SumContrib(Age1, Age2, ContrRate1, Salary, SalIncr, Interest, ContrRate2, YMPE, YMPEIncr,StartContr) returns 84304</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

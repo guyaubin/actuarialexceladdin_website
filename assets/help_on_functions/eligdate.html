@@ -84,24 +84,42 @@
             </div>
 
             <br>
-            <div class="help-table">
-                <p><span class="highlight">Example #1:</span> Normal retirement at age 60 (next 1<sup>st</sup> of the month) for a person born on July 15, 1979:</p>
-                <p>Date1 = date(1979, 7, 15)</p>
-                <p>Eligdate(Date1, 60) = 2039-08-01
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6">Normal retirement at age 60 (next 1<sup>st</sup> of the month) for a person born on July 15, 1979:</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Date1 = date(1979, 7, 15)</p>
+                        <p class="help-example-answer">Eligdate(Date1, 60) returns 2039-08-01</p>
+                    </div>
+                </div>
             </div>
 
             <br>
-            <div class="help-table">
-                <p><span class="highlight">Example #2:</span> Unreduced early retirement when the following conditions are met:</p>
-                <ol>
-                    <li>Minimum 55 years of age</li>
-                    <li>Minimum 30 years of service</li>
-                    <li>Minimum age + service is 90 years</li>
-                </ol>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6">
+                        <p>Unreduced early retirement when the following conditions are met:</p>
+                        <ol>
+                            <li>Minimum 55 years of age</li>
+                            <li>Minimum 30 years of service</li>
+                            <li>Minimum age + service is 90 years</li>
+                        </ol>
+                    </div>
+                </div>
 
-                <p>Date1 = date(1979, 7, 15)</p>
-                <p>Date2 = date(2006, 11, 28)</p>
-                <p>Eligdate(Date1, 55, Date2, 30, 90, True, True) = 2038-04-01
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Date1 = date(1979, 7, 15)</p>
+                        <p>Date2 = date(2006, 11, 28)</p>
+                        <p class="help-example-answer">Eligdate(Date1, 55, Date2, 30, 90, True, True) returns 2038-04-01</p>
+                    </div>
+                </div>
             </div>
 
         </div>
