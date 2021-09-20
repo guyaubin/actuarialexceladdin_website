@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>AddDate</title>
+  <title>VecAdd</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -27,13 +27,36 @@
     <section id="help" class="help">
         <div class="container">
             <div class="row">
-                <div class="col"><h1>AddDate function</h1></div>
+                <div class="col"><h1>VecAdd function</h1></div>
                 <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
             </div>
 
-            <p class="mt-5">The <span class="highlight">AddDate function</span>, returns a date that is <span class="highlight">t-Years</span> away from <span class="highlight">Date</span>.  In order to do so, complete years are added first and the remaining fraction is converted into days by multiplying by 365.25.</p>
+            <p class="mt-5">The <span class="highlight">VecAdd function</span>, adds each corresponding element of two vectors and returns a vector.</p>
 
-            <p class="see-also">See also <a href="zDur.html" target="_blank">zDur</a> to calculate the years between two dates.</p>
+            <p class="see-also">See also:</p>
+
+                <p class="see-also"> 
+                    <a href="vecsub.html" target="_blank">VecSub</a>,
+                    <a href="vecmul.html" target="_blank">VecMul</a>,
+                    <a href="vecdiv.html" target="_blank">VecDiv</a> for other vector-vector transformation.
+                </p>
+                
+                <p class="see-also"> 
+                    <a href="vecinv.html" target="_blank">VecInv</a> to invert the elements of a vector.
+                </p>
+
+                <p class="see-also"> 
+                    <a href="vecsum.html" target="_blank">VecSum</a>,
+                    <a href="vecproduct.html" target="_blank">VecProduct</a> to transform a vector into a scalar.
+                </p>
+
+                <p class="see-also">
+                    <a href="scaladd.html" target="_blank">ScalAdd</a>,
+                    <a href="scalsub.html" target="_blank">ScalSub</a>,
+                    <a href="scalmul.html" target="_blank">ScalMul</a>,
+                    <a href="scaldiv.html" target="_blank">ScalDiv</a> for vector-scalar transformation of a vector.
+                </p>
+    
 
             <p class="help-required mt-4">* : Required parameter</p>
 
@@ -44,14 +67,14 @@
                     <div class="col-9">Description</div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">Date *</div>
+                    <div class="col-2 help-param-required">Vector 1 *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">.....</div>
+                    <div class="col-9">Vector of numbers</div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">T-Years *</div>
+                    <div class="col-2 help-param-required">Vector 2 *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9"><span class="note">fraction and negative value are allowed</span></div>
+                    <div class="col-9">Vector of numbers</div>
                 </div>
             </div>
 
@@ -59,33 +82,21 @@
             <div class="help-example">
                 <div class="row help-example-title">
                     <div class=col-2><span class="highlight">Example #1</span></div>
-                    <div class="col-6"><span class="highlight">t-Years is positive</span></div>
+                    <div class="col-6">
+                        <p><span class="highlight">.....</span></p>
+                    </div>
                 </div>
+
                 <div class="row help-example-line">
                     <div class="col-2"></div>
                     <div class="col-10">
-                        <p>Date = date(2016, 11, 3)</p>
-                        <p>tYears = 4.6959</p>
-                        <p class="help-example-answer">AddDate(Date, tYears) returns 2021-07-15</p>
+                        <p>Vector1 = {9, 5, 7}</p>
+                        <p>Vector2 = {2, 4, 6}</p>
+                        <p class="help-example-answer">VecAdd(Vector1, Vector2) returns {11, 9, 13}</p>
                     </div>
                 </div>
             </div>
 
-            <br>
-            <div class="help-example">
-                <div class="row help-example-title">
-                    <div class=col-2><span class="highlight">Example #2</span></div>
-                    <div class="col-6"><span class="highlight">t-Years is negative</span></div>
-                </div>
-                <div class="row help-example-line">
-                    <div class="col-2"></div>
-                    <div class="col-10">
-                        <p>Date = date(2021, 7, 15)</p>
-                        <p>tYears = -4.6959</p>
-                        <p class="help-example-answer">AddDate(Date, tYears) returns 2016-11-03</p>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </section>

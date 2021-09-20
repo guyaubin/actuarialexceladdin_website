@@ -1302,3 +1302,22 @@ section.help {
   font-size: 90%;
   font-style: italic;
 }
+
+.help .see-also {
+  margin-left: 50px;
+  margin-bottom: 0;
+  font-size: 90%;
+  font-style: italic;
+}
+
+.help p.see-also a,
+.help div.see-also a {
+  font-size: inherit;
+  color: blue;
+  text-decoration: underline;
+}
+
+.help p.see-also a:hover,
+.help div.see-alse a:hover {
+  font-weight: 600;
+}

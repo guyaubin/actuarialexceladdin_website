@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FmtNum</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>FmtNum function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">FmtNum function</span>, takes 
+                a number as input and returns a text representing the number with or 
+                without the currency sign ($) and complying with the English or French number notation.</p>
+
+                <p class="see-also">See also 
+                    <a href="fmtdate.html" target="_blank">FmtDate</a>,
+                    <a href="fmtmonth.html" target="_blank">FmtMonth</a>,
+                    <a href="fmtquarter.html" target="_blank">FmtQuarter</a>,
+                    <a href="monthnum.html" target="_blank">MonthNum</a>.
+                </p>
+    
+
+            <p class="help-required mt-4">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Number *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Number beign formatted into a text</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Decimal</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Number of decimals kept, if negative, <span class="highlight">Number</span> will be rounded by 10<sup>-Dec</sup></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Language</div>
+                    <div class="col-1">F</div>
+                    <div class="col-9">Either F for French or E for English</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Currency sign</div>
+                    <div class="col-1"></div>
+                    <div class="col-9">$ will be used if any character is provided</div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6">
+                        <p><span class="highlight">Dec is positive</span></p>
+                    </div>
+                </div>
+
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Number = 3141.59</p>
+                        <p>Decimal = 1</p>
+                        <p>Currency = "z"</p>
+                        <p class="help-example-answer">FmtNum(Number, Decimal,, Currency) returns "3 141,6 $"</p>
+                        <p class="help-example-answer">FmtNum(Number, Decimal, "E", Currency) returns "$3,141.6"</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #2</span></div>
+                    <div class="col-6">
+                        <p><span class="highlight">Dec is negative</span></p>
+                    </div>
+                </div>
+
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Number = 3141.59</p>
+                        <p>Decimal = -2</p>
+                        <p class="help-example-answer">FmtNum(Number, Decimal) returns "3 100"</p>
+                        <p class="help-example-answer">FmtNum(Number, Decimal, "E") returns "3,100"</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>

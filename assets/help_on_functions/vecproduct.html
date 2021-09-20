@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FindFirstName</title>
+  <title>VecProduct</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -27,14 +27,36 @@
     <section id="help" class="help">
         <div class="container">
             <div class="row">
-                <div class="col"><h1>FindFirstName function</h1></div>
+                <div class="col"><h1>VecProduct function</h1></div>
                 <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
             </div>
 
-            <p class="mt-5">The <span class="highlight">FindFirstName function</span>, returns the first name of a person.</p>
+            <p class="mt-5">The <span class="highlight">VecProduct function</span>, returns the product of all the elements of a vector.</p>
 
-            <p class="see-also">See also <a href="findlastname.html" target="_blank">FindLastName</a>,
-                <a href="invname.html" target="_blank">InvName</a>.</p>
+            <p class="see-also">See also:</p>
+
+                <p class="see-also"> 
+                    <a href="vecadd.html" target="_blank">VecAdd</a>,
+                    <a href="vecsub.html" target="_blank">VecSub</a>,
+                    <a href="vecmul.html" target="_blank">VecMul</a>,
+                    <a href="vecdiv.html" target="_blank">VecDiv</a> for other vector-vector transformation.
+                </p>
+                
+                <p class="see-also"> 
+                    <a href="vecinv.html" target="_blank">VecInv</a> to invert the elements of a vector.
+                </p>
+
+                <p class="see-also"> 
+                    <a href="vecsum.html" target="_blank">VecSum</a> to transform a vector into a scalar.
+                </p>
+
+                <p class="see-also">
+                    <a href="scaladd.html" target="_blank">ScalAdd</a>,
+                    <a href="scalsub.html" target="_blank">ScalSub</a>,
+                    <a href="scalmul.html" target="_blank">ScalMul</a>,
+                    <a href="scaldiv.html" target="_blank">ScalDiv</a> for vector-scalar transformation of a vector.
+                </p>
+    
 
             <p class="help-required mt-4">* : Required parameter</p>
 
@@ -45,14 +67,9 @@
                     <div class="col-9">Description</div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">Name *</div>
+                    <div class="col-2 help-param-required">Vector *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Full name with last name first then a separator then the first name</div>
-                </div>
-                <div class="row">
-                    <div class="col-2 help-param-required">Separator</div>
-                    <div class="col-1">,</div>
-                    <div class="col-9">the character(s) separating the firstname and lastname</div>
+                    <div class="col-9">Vector of numbers</div>
                 </div>
             </div>
 
@@ -60,32 +77,20 @@
             <div class="help-example">
                 <div class="row help-example-title">
                     <div class=col-2><span class="highlight">Example #1</span></div>
-                    <div class="col-6"><span class="highlight">Default separator (i.e. the comma)</span></div>
+                    <div class="col-6">
+                        <p><span class="highlight">.....</span></p>
+                    </div>
                 </div>
+
                 <div class="row help-example-line">
                     <div class="col-2"></div>
                     <div class="col-10">
-                        <p>Name = "Doe, John"</p>
-                        <p class="help-example-answer">FindFirstName(Name) returns "John"</p>
+                        <p>Vector = {9, 5, 7}</p>
+                        <p class="help-example-answer">VecProduct(Vector) returns 315</p>
                     </div>
                 </div>
             </div>
 
-            <br>
-            <div class="help-example">
-                <div class="row help-example-title">
-                    <div class=col-2><span class="highlight">Example #2</span></div>
-                    <div class="col-6"><span class="highlight">Special separator</span></div>
-                </div>
-                <div class="row help-example-line">
-                    <div class="col-2"></div>
-                    <div class="col-10">
-                        <p>Name = "Doe :: John"</p>
-                        <p>Separator = "::"</p>
-                        <p class="help-example-answer">FindFirstName(Name, Separator) returns "John"</p>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </section>

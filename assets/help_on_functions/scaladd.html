@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ScalAdd</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>ScalAdd function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p class="mt-5">The <span class="highlight">ScalAdd function</span>, adds a scalar to each element of a vector and returns a vector.</p>
+
+            <p class="see-also">See also:</p>
+                <p class="see-also">
+                    <a href="scalsub.html" target="_blank">ScalSub</a>,
+                    <a href="scalmul.html" target="_blank">ScalMul</a>,
+                    <a href="scaldiv.html" target="_blank">ScalDiv</a> for other vector-scalar transformation of a vector.
+                </p>
+
+                <p class="see-also"> 
+                    <a href="vecadd.html" target="_blank">VecAdd</a>,
+                    <a href="vecsub.html" target="_blank">VecSub</a>,
+                    <a href="vecmul.html" target="_blank">VecMul</a>,
+                    <a href="vecdiv.html" target="_blank">VecDiv</a> for vector-vector transformation.
+                </p>
+                
+                <p class="see-also"> 
+                    <a href="vecinv.html" target="_blank">VecInv</a> to invert the elements of a vector.
+                </p>
+
+                <p class="see-also"> 
+                    <a href="vecsum.html" target="_blank">VecSum</a>,
+                    <a href="vecproduct.html" target="_blank">VecProduct</a> to transform a vector into a scalar.
+                </p>
+    
+
+            <p class="help-required mt-4">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Vector *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Vector of numbers</div>
+                </div>
+                <div class="row">
+                    <div class="col-2 help-param-required">Constant *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-9">Scalar being added to each element of the <span class="highlight">Vector</span></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Example #1</span></div>
+                    <div class="col-6">
+                        <p><span class="highlight">.....</span></p>
+                    </div>
+                </div>
+
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Vector = {0.01, 0.05, -0.03}</p>
+                        <p>Constant = 1</p>
+                        <p class="help-example-answer">ScalAdd(Vector, Constant) returns {1.01, 1.05, 0.97}</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>
