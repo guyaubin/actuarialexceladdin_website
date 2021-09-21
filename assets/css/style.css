@@ -611,6 +611,16 @@ section {
   min-height: 260px;
 }
 
+.tutorials .new {
+  border-radius: 12px;
+  background-color: #ffa70f;
+  color: #128045;
+  font-weight: 500;
+  font-size: 60%;
+  font-style: italic;
+  padding: 1px 10px 1px 10px;
+}
+
 #btn-cia-cheat-sheet {
   font-size: 12px;
   background: #ffa70f;
