@@ -10,25 +10,47 @@
 --------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
+  --fontFamily: "Nunito", sans-serif;
+  --bodyFontFamily: "Open Sans", sans-serif;
+  --FAQFontFamily: "Poppins", sans-serif;
+
+  --bodyColor: #444444;
+  --mainColor: #128045;
+  --lightColor: #53e974;
+  --darkColor: #094826;
+  --darkColorDimmed: rgba(9, 72, 38, 0.75);
+  --helpNoteColor: #666;
+  --helpHighLightColor: #333;
+  --footerColor: #e1ecff;
+  --white: #fff;
+  --black: #000;
+  --red: red;
+
+  --BGColor: #ffa70f;
+  --BGHelp: #e6eae1;
+  --BGHelpTable: #bcc0b8;
+  --BGExampleTable: #ccf7c8;
+
+  --BGGradient: linear-gradient(to bottom right, var(--darkColor), var(--lightColor));
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+  font-family: var(--bodyFontFamily);
+  color: var(--darkColor);
 }
 
 a {
-  color: #128045;
+  color: var(--mainColor);
   text-decoration: none;
 }
 
 a:hover {
-  color: #53e974; /* ??? for quick find */
+  color: var(--BGColor);
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--fontFamily);
 }
 
 /*--------------------------------------------------------------
@@ -49,7 +71,7 @@ section {
   letter-spacing: 1px;
   font-weight: 700;
   margin: 0;
-  color: #128045;
+  color: var(--mainColor);
   text-transform: uppercase;
 }
 
@@ -59,7 +81,7 @@ section {
   font-size: 38px;
   line-height: 42px;
   font-weight: 700;
-  color: #094826;
+  color: var(--darkColor);
 }
 
 @media (max-width: 768px) {
@@ -71,13 +93,13 @@ section {
 
 /*--------------------------------------------------------------
 # Breadcrumbs
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .breadcrumbs {
   padding: 15px 0;
-  background: #094826;
+  background: var(--darkColor);
   min-height: 40px;
   margin-top: 82px;
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 992px) {
@@ -101,7 +123,7 @@ section {
 }
 
 .breadcrumbs ol a {
-  color: #fff;
+  color: var(--white);
   transition: 0.3s;
 }
 
@@ -116,9 +138,10 @@ section {
 .breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #8894f6;
+  color: var(--lightColor);
   content: "/";
 }
+*/
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -130,7 +153,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #ffa70f; /* #128045; changed by Guy */
+  background: var(--BGColor);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -139,13 +162,13 @@ section {
 
 .back-to-top i {
   font-size: 24px;
-  color: #fff;
+  color: var(--white);
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #53e974;
-  color: #fff;
+  background: var(--lightColor);
+  color: var(--white);
 }
 
 .back-to-top.active {
@@ -172,7 +195,7 @@ section {
 }
 
 .header.header-scrolled {
-  background: #fff;
+  background: var(--white);
   padding: 15px 0;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
@@ -190,8 +213,8 @@ section {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #094826;
-  font-family: "Nunito", sans-serif;
+  color: var(--darkColor);
+  font-family: var(--fontFamily);
   margin-top: 3px;
 }
 
@@ -222,10 +245,10 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--fontFamily);
   font-size: 16px;
   font-weight: 700;
-  color: #21a366;
+  color: var(--lightColor);
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -237,19 +260,19 @@ section {
 }
 
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #ffa70f;
+  color: var(--BGColor);
 }
 
 .navbar .getstarted {
-  background: #128045;
+  background: var(--mainColor);
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
-  color: #fff;
+  color: var(--white);
 }
 
 .navbar .getstarted:hover {
-  color: #fff;
+  color: var(--white);
   background: #5969f3;
 }
 
@@ -263,7 +286,7 @@ section {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: var(--white);
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
   border-radius: 4px;
@@ -285,7 +308,7 @@ section {
 }
 
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #128045;
+  color: var(--mainColor);
 }
 
 .navbar .dropdown:hover > ul {
@@ -320,7 +343,7 @@ section {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #094826;
+  color: var(--darkColor);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -329,7 +352,7 @@ section {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 991px) {
@@ -367,7 +390,7 @@ section {
   left: 15px;
   padding: 10px 0;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--white);
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -375,11 +398,11 @@ section {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #094826;
+  color: var(--darkColor);
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #128045;
+  color: var(--mainColor);
 }
 
 .navbar-mobile .getstarted {
@@ -394,7 +417,7 @@ section {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: var(--white);
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -411,7 +434,7 @@ section {
 }
 
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #128045;
+  color: var(--mainColor);
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -432,11 +455,11 @@ section {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
-  color: #094826;
+  color: var(--darkColor);
 }
 
 .hero h2 {
-  color: #444444;
+  color: var(--mainColor);
   margin: 15px 0 0 0;
   font-size: 26px;
 }
@@ -447,13 +470,13 @@ section {
   padding: 15px 40px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #fff;
-  background: #128045;
+  color: var(--white);
+  background: var(--mainColor);
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
 .hero .btn-get-started span {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--fontFamily);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -523,19 +546,24 @@ section {
   padding-top: 30px;
   font-size: 12px;
   font-weight: 700;
-  color: #000; /* #128045; */
+  color: var(--darkColor);
   text-transform: uppercase;
 }
 
 .about h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #094826;
+  color: var(--darkColor);
 }
 
 .about p {
   margin: 5px 0 10px 0;
   line-height: 24px;
+  color: var(--mainColor);
+}
+
+.about ul {
+  color: var(--mainColor);
 }
 
 .about .btn-read-more {
@@ -543,13 +571,13 @@ section {
   padding: 15px 40px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #fff;
-  background: #128045;
+  color: var(--white);
+  background: var(--mainColor);
   box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
 }
 
 .about .btn-read-more span {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--fontFamily);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -568,7 +596,12 @@ section {
 /*--------------------------------------------------------------
 # Tutorials (from the Medicio BootstrapMade template)
 --------------------------------------------------------------*/
+.tutorials h4 {
+  color: var(--mainColor);
+}
+
 .tutorials .icon-box h4 {
+  color: var(--darkColor);
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 0 15px;
@@ -577,18 +610,33 @@ section {
 .tutorials .icon-box i {
   font-size: 48px;
   float: right;
-  color: #185c37;
+  color: var(--darkColor);
 }
 
 .tutorials .icon-box i:not(.coming-soon):hover {
   font-size: 49px;
-  color: #ffa70f; /* #ffa70f;  #53e974; */
+  color: var(--BGColor);
+}
+
+.tutorials .icon-box .col-1 {
+  margin-top: 13px;
 }
 
 .tutorials .icon-box p {
   font-size: 15px;
-  color: rgba(24,92,55,0.75);
+  color: var(--darkColorDimmed);
   margin-left: 15px;
+}
+
+.tutorials .icon-box h4 {
+  margin-top: 15px;
+}
+
+.tutorials .icon-box p:last-of-type {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  border-bottom: 1px solid var(--darkColor);
 }
 
 .tutorials .icon-box .minutes {
@@ -597,48 +645,52 @@ section {
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0;
-  color: rgba(24,92,55,1.0);
+  color: var(--darkColor);
 }
 
 .tutorials .icon-box .minutes-soon {
-  color: red;
+  color: var(--red);
 }
 
 .tutorials .image {
-  background-position: top center; /* test */
+  background-position: top center;
   background-repeat: repeat-y;
-  /* background-size: cover; */
   min-height: 260px;
 }
 
 .tutorials .new {
   border-radius: 12px;
-  background-color: #ffa70f;
-  color: #128045;
+  background-color: var(--BGColor);
+  color: var(--mainColor);
   font-weight: 500;
   font-size: 60%;
   font-style: italic;
   padding: 1px 10px 1px 10px;
 }
 
-#btn-cia-cheat-sheet {
+.tutorials a.btn-download {
   font-size: 12px;
-  background: #ffa70f;
+  background: var(--BGColor);
   text-align: right;
   padding: 5px 10px;
-  margin: 0;
+  margin: 0 0 50px 0;
   border-radius: 6px;
+}
+
+.tutorials a.btn-download:hover {
+  color: var(--white);
 }
 
 /*--------------------------------------------------------------
 # Free Trial (and Download)
 --------------------------------------------------------------*/
 #free-trial {
+  background-image: var(--BGGradient);
   margin-bottom: 200px;
 }
 
 #btn-free-trial {
-  background: #ffa70f;
+  background: var(--BGColor);
 }
 
 .free-trial {
@@ -653,25 +705,25 @@ section {
   border: 0;
   padding: 12px 15px;
   transition: 0.3s;
-  color: #fff;
+  color: var(--white);
   border-radius: 0;
-  border-right: 2px solid #ffa70f;
+  border-right: 2px solid var(--BGColor);
   font-weight: 600;
   font-size: 15px;
 }
 
 .free-trial .nav-link:hover {
-  color: #ffa70f;
+  color: var(--BGColor);
 }
 
 .free-trial .nav-link.active {
   color: white;
-  background: #ffa70f;
-  border-color: #ffa70f;
+  background: var(--BGColor);
+  border-color: var(--BGColor);
 }
 
 .free-trial .nav-link:hover {
-  border-color: #ffa70f;
+  border-color: var(--BGColor);
 }
 
 .free-trial .tab-pane.active {
@@ -683,11 +735,11 @@ section {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--white);
 }
 
 .free-trial h2, .free-trial li {
-  color: #fff;
+  color: var(--white);
 }
 
 .free-trial .section-title p {
@@ -695,12 +747,12 @@ section {
 }
 
 .free-trial p .instructions a {
-  color: #fff;
-  background: #ffa70f;
+  color: var(--white);
+  background: var(--BGColor);
 }
 
 .free-trial .details p {
-  color: #bbb;
+  color: var(--white);
 }
 
 .free-trial .details p .instructions {
@@ -719,13 +771,13 @@ section {
   padding: 15px 40px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #fff;
-  background: #ffa70f;
+  color: var(--white);
+  background: var(--BGColor);
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
 .free-trial .btn-get-started span {
-  font-family: "Nunito", sans-serif;
+  font-family: var(--fontFamily);
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -742,13 +794,13 @@ section {
 }
 
 .free-trial a {
-  color: #ffa70f;
+  color: var(--BGColor);
   font-weight: 600;
   padding: 0 0 0 0;
 }
 
 .free-trial a:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 992px) {
@@ -766,7 +818,7 @@ section {
 }
 
 .faq .section-title h2 {
-  background: #53e974;
+  background: var(--lightColor);
 }
 
 .faq .faq-list {
@@ -784,7 +836,7 @@ section {
 
 .faq .faq-list li {
   padding: 20px;
-  background: #fff;
+  background: var(--white);
   border-radius: 4px;
   position: relative;
 }
@@ -792,7 +844,7 @@ section {
 .faq .faq-list a:not(.email) {
   display: block;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--FAQFontFamily);
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -806,7 +858,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #53e974;
+  color: var(--lightColor);
 }
 
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
@@ -826,15 +878,15 @@ section {
 }
 
 .faq .faq-list a.active {
-  color: #53e974;
+  color: var(--lightColor);
 }
 
 .faq .faq-list a.collapsed {
-  color: #128045;
+  color: var(--mainColor);
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #53e974;
+  color: var(--lightColor);
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -845,14 +897,14 @@ section {
   display: none;
 }
 #email {
-  color: #128045;
-  background: #ffa70f;
+  color: var(--mainColor);
+  background: var(--BGColor);
   border-radius: 5px;
   padding: 0 10px;
 }
 
 #email:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 1200px) {
@@ -863,9 +915,9 @@ section {
 
 /*--------------------------------------------------------------
 # Contact
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .contact .info-box {
-  color: #444444;
+  color: var(--bodyColor);
   background: #fafbff;
   padding: 30px;
 }
@@ -873,12 +925,12 @@ section {
 .contact .info-box i {
   font-size: 38px;
   line-height: 0;
-  color: #128045;
+  color: var(--mainColor);
 }
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #094826;
+  color: var(--darkColor);
   font-weight: 700;
   margin: 20px 0 10px 0;
 }
@@ -898,7 +950,7 @@ section {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -908,7 +960,7 @@ section {
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: var(--white);
   background: #18d26e;
   text-align: center;
   padding: 15px;
@@ -918,7 +970,7 @@ section {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -945,7 +997,7 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #128045;
+  border-color: var(--mainColor);
 }
 
 .contact .php-email-form input {
@@ -957,10 +1009,10 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #128045;
+  background: var(--mainColor);
   border: 0;
   padding: 10px 30px;
-  color: #fff;
+  color: var(--white);
   transition: 0.4s;
   border-radius: 4px;
 }
@@ -968,6 +1020,7 @@ section {
 .contact .php-email-form button[type="submit"]:hover {
   background: #5969f3;
 }
+*/
 
 @-webkit-keyframes animate-loading {
   0% {
@@ -991,66 +1044,17 @@ section {
 # Footer
 --------------------------------------------------------------*/
 .footer {
+  color: var(--mainColor);
   background: #f6f9ff;
   padding: 0 0 30px 0;
   font-size: 14px;
 }
 
-.footer .footer-newsletter {
-  padding: 50px 0;
-  background: #f6f9ff;
-  border-top: 1px solid #e1ecff;
-}
-
-.footer .footer-newsletter h4 {
-  font-size: 24px;
-  margin: 0 0 10px 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  color: #094826;
-}
-
-.footer .footer-newsletter form {
-  margin-top: 20px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-  border: 1px solid #e1ecff;
-}
-
-.footer .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 8px;
-  width: calc(100% - 140px);
-}
-
-.footer .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 30px;
-  margin: 3px;
-  background: #128045;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 4px;
-}
-
-.footer .footer-newsletter form input[type="submit"]:hover {
-  background: #5969f3;
-}
-
 .footer .footer-top {
   background: white url(../img/footer-bg.png) no-repeat right top;
   background-size: contain;
-  border-top: 1px solid #e1ecff;
-  border-bottom: 1px solid #e1ecff;
+  border-top: 1px solid var(--footerColor);
+  border-bottom: 1px solid var(--footerColor);
   padding: 60px 0 30px 0;
 }
 
@@ -1067,6 +1071,7 @@ section {
 .footer .footer-top .footer-info .logo {
   line-height: 0;
   margin-bottom: 15px;
+  color: var(--darkColor);
 }
 
 .footer .footer-top .footer-info .logo img {
@@ -1078,8 +1083,7 @@ section {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #094826;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--fontFamily);
   margin-top: 3px;
 }
 
@@ -1087,26 +1091,13 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Nunito", sans-serif;
-}
-
-.footer .footer-top .social-links a {
-  font-size: 20px;
-  display: inline-block;
-  color: rgba(1, 41, 112, 0.5);
-  line-height: 0;
-  margin-right: 10px;
-  transition: 0.3s;
-}
-
-.footer .footer-top .social-links a:hover {
-  color: #094826;
+  font-family: var(--fontFamily);
 }
 
 .footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #094826;
+  color: var(--darkColor);
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
@@ -1139,15 +1130,15 @@ section {
   padding-top: 0;
 }
 
-.footer .footer-top .footer-links ul a {
-  color: #21a366;
-  transition: 0.3s;
+.footer .footer-links a {
+  transition: 0.2s;
   display: inline-block;
   line-height: 1;
 }
 
-.footer .footer-top .footer-links ul a:hover {
-  color: #128045;
+.footer .footer-links a:hover {
+  color: var(--BGColor);
+  font-weight: 600;
 }
 
 .footer .footer-top .footer-contact p {
@@ -1157,21 +1148,18 @@ section {
 .footer .copyright {
   text-align: center;
   padding-top: 30px;
-  color: #094826;
+  color: var(--darkColor);
 }
 
 .footer .credits {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #094826;
+  color: var(--darkColor);
 }
 
-#free-trial {
-  background: #107c41;
-}
-
-#smarter {
+.footer h5.smarter {
+  color: var(--mainColor);
   padding-left: 45px;
 }
 
@@ -1184,13 +1172,13 @@ section.help {
 }
 
 .help {
-  background: #e6eae1;
+  background: var(--BGHelp);
 }
 
 .help .help-example {
   margin: 0;
   padding: 0 0 0 15px;
-  background-color: #ccf7c8;
+  background-color: var(--BGExampleTable);
 }
 
 .help .help-muted {
@@ -1225,30 +1213,29 @@ section.help {
 .help .help-table {
   margin: 0;
   padding: 0 0 0 15px;
-  background-color: #bcc0b8;
+  background-color: var(--BGHelpTable);
 }
 .help .help-table .help-table-title {
   font-weight: 600;
   font-size: 130%;
-  font-family: "Nunito", sans-serif;
-  color: #185c37;
+  font-family: var(--fontFamily);
+  color: var(--darkColor);
 }
 
 .help .help-required {
-  color: #185c37;
+  color: var(--darkColor);
 }
 .help .help-param-required {
-  /* color: #185c37; */
   font-weight: 600;
 }
 
 .help a {
   font-size: 36px;
-  color: #53e974;
+  color: var(--lightColor);
 }
 
 .help a:hover {
-  color: #ffa70f;
+  color: var(--BGColor);
 }
 
 .help p.function-definition a,
@@ -1289,7 +1276,7 @@ section.help {
 
 .help .note {
   font-size: smaller;
-  color: #666;
+  color: var(--helpNoteColor);
 }
 
 .help .blue {
@@ -1303,7 +1290,7 @@ section.help {
 }
 
 .help .highlight {
-  color: #333;
+  color: var(--helpNoteColor);
   font-weight: 600;
 }
 
