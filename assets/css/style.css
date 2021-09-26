@@ -896,14 +896,14 @@ section {
 .faq .faq-list a.collapsed .icon-close {
   display: none;
 }
-#email {
+.faq p a.email {
   color: var(--mainColor);
   background: var(--BGColor);
   border-radius: 5px;
   padding: 0 10px;
 }
 
-#email:hover {
+.faq p a.email:hover {
   color: var(--white);
 }
 
