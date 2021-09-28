@@ -25,9 +25,11 @@
   --white: #fff;
   --black: #000;
   --red: red;
+  --blue: blue;
 
   --BGColor: #ffa70f;
   --BGHelp: #e6eae1;
+  --BGHelpAssumption: #d3f3c3;
   --BGHelpTable: #bcc0b8;
   --BGExampleTable: #ccf7c8;
 
@@ -1215,6 +1217,11 @@ section.help {
   padding: 0 0 0 15px;
   background-color: var(--BGHelpTable);
 }
+
+.help .assumption {
+  background: var(--BGHelpAssumption);
+}
+
 .help .help-table .help-table-title {
   font-weight: 600;
   font-size: 130%;
