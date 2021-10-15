@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BestAverageEarnings</title>
+  <title>AverageEarnings</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -27,17 +27,15 @@
     <section id="help" class="help">
         <div class="container">
             <div class="row">
-                <div class="col"><h1>BestAverageEarnings function</h1></div>
+                <div class="col"><h1>AverageEarnings function</h1></div>
                 <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
             </div>
 
-            <p class="mt-5">The <span class="highlight">BestAverageEarnings function</span>, returns the <span class="highlight">NbYears</span> average 
+            <p class="mt-5">The <span class="highlight">AverageEarnings function</span>, returns the <span class="highlight">NbYears</span> average 
                 of best earnings from the <span class="highlight">Earnings history</span>.  If <span class="highlight">Service history</span> is provided, annualized earnings are first ranked, then 
-                weighted according to their respective service.  Sum of service and corresponding earnings are considered up to <span class="highlight">NbYears</span>.</p>
+                weighted according to their respective service.  Sum of service and corresponding earnings are considered up to <span class="highlight">NbYears</span>.  By default, best earnings do not need to be consecutive.</p>
 
             <p>If <span class="highlight">OutOf</span> is provided, then only the first <span class="highlight">OutOf</span> elements of Earnings history and Service history are used.</p>
-
-            <p class="see-also">See also <a href="BestConsecutiveAverageEarnings.html" target="_blank">BestConsecutiveAverageEarnings</a>.</p>
 
             <p class="see-also">See also <a href="futureaverageearnings.html" target="_blank">FutureAverageEarnings</a> 
                 for projecting future average earnings.</p>
@@ -56,11 +54,6 @@
                     <div class="col-9">Number of years of earnings included in the average, <span class="note">must be an integer</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">OutOf</div>
-                    <div class="col-1">99</div>
-                    <div class="col-9">Number of years considered, <span class="note">must be an integer</span></div>
-                </div>
-                <div class="row">
                     <div class="col-2 help-param-required">Earnings history *</div>
                     <div class="col-1">--</div>
                     <div class="col-9">Range of cells (contiguous) containing the earnings history from most recent to oldest.</div>
@@ -69,6 +62,16 @@
                     <div class="col-2">Service history</div>
                     <div class="col-1">1, 1, 1, ...</div>
                     <div class="col-9">Range of cells (contiguous) containing the service history from most recent to oldest.  Each cell must contain a value from 0 to 1.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">OutOf</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Number of years considered, <span class="note">must be an integer, 0 means all years considered</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Consecutive</div>
+                    <div class="col-1">False</div>
+                    <div class="col-9">True, when best average comes from consecutive earnings.</div>
                 </div>
             </div>
 
