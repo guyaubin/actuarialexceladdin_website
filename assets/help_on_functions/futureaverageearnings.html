@@ -60,24 +60,34 @@
                     <div class="col-9">Age at time-0, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">AgeFut *</div>
+                    <div class="col-2 help-param-required">Age Fut *</div>
                     <div class="col-1">--</div>
                     <div class="col-9">Age in the future when average salary is calculated, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">NbYears *</div>
+                    <div class="col-2 help-param-required">Nb Years *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Number of years of earnings included in the average, <span class="note">must be an integer</span></div>
+                    <div class="col-9">Number of years of earnings included in the average, <span class="note">can have fraction</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">SalHist</div>
+                    <div class="col-2">Earnings history</div>
                     <div class="col-1">--</div>
                     <div class="col-9">Range of cells (contiguous) containing the earnings history from most recent to oldest.</div>
                 </div>
                 <div class="row">
-                    <div class="col-2">PartHist</div>
+                    <div class="col-2">Service history</div>
                     <div class="col-1">1, 1, 1, ...</div>
                     <div class="col-9">Range of cells (contiguous) containing the service history from most recent to oldest.  Each cell must contain a value from 0 to 1.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Best earnings</div>
+                    <div class="col-1">False</div>
+                    <div class="col-9">False/True for 'Last'/'Best' average earnings respectively.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Out of</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Number of years considered, <span class="note">must be an integer, 0 means all years considered.</span></div>
                 </div>
             </div>
 
@@ -86,7 +96,7 @@
                 <div class="row help-example-title">
                     <div class=col-2><span class="highlight">Example #1</span></div>
                     <div class="col-6"><span class="highlight">Retirement in distant future (i.e. > NbYears)</span>
-                        <p>In such a case, past earnings history is not used.</p>
+                        <p>Since 'Best earnings' is False, only 'Last' earnings are used.</p>
                     </div>
                 </div>
                 <div class="row help-example-line">
