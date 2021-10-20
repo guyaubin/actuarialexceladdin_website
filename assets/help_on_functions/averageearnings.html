@@ -31,11 +31,11 @@
                 <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
             </div>
 
-            <p class="mt-5">The <span class="highlight">AverageEarnings function</span>, returns the <span class="highlight">NbYears</span> average 
+            <p class="mt-5">The <span class="highlight">AverageEarnings function</span>, returns the <span class="highlight">Nb Years</span> average 
                 of best earnings from the <span class="highlight">Earnings history</span>.  If <span class="highlight">Service history</span> is provided, annualized earnings are first ranked, then 
-                weighted according to their respective service.  Sum of service and corresponding earnings are considered up to <span class="highlight">NbYears</span>.  By default, best earnings do not need to be consecutive.</p>
+                weighted according to their respective service.  Sum of service and corresponding earnings are considered up to <span class="highlight">Nb Years</span>.  By default, best earnings do not need to be consecutive.</p>
 
-            <p>If <span class="highlight">OutOf</span> is provided, then only the first <span class="highlight">OutOf</span> elements of Earnings history and Service history are used.</p>
+            <p>If <span class="highlight">Out Of</span> is provided, then only the first <span class="highlight">Out Of</span> elements of Earnings history and Service history are used.</p>
 
             <p class="see-also">See also <a href="futureaverageearnings.html" target="_blank">FutureAverageEarnings</a> 
                 for projecting future average earnings.</p>
@@ -49,9 +49,9 @@
                     <div class="col-9">Description</div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">NbYears *</div>
+                    <div class="col-2 help-param-required">Nb Years *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Number of years of earnings included in the average, <span class="note">must be an integer</span></div>
+                    <div class="col-9">Number of years of earnings included in the average, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2 help-param-required">Earnings history *</div>
@@ -64,7 +64,12 @@
                     <div class="col-9">Range of cells (contiguous) containing the service history from most recent to oldest.  Each cell must contain a value from 0 to 1.</div>
                 </div>
                 <div class="row">
-                    <div class="col-2">OutOf</div>
+                    <div class="col-2">Best earnings</div>
+                    <div class="col-1">True</div>
+                    <div class="col-9">True/False for 'Best'/'Last' average earnings respectively.</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Out Of</div>
                     <div class="col-1">0</div>
                     <div class="col-9">Number of years considered, <span class="note">must be an integer, 0 means all years considered</span></div>
                 </div>
@@ -85,8 +90,8 @@
                     <div class="col-2"></div>
                     <div class="col-10">
                         <p>NbYears = 5</p>
-                        <p>Earnings history = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
-                        <p class="help-example-answer">BestAverageEarnings(NbYears, , Earnings history) returns 53835.70</p>
+                        <p>EarningsHistory = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                        <p class="help-example-answer">BestAverageEarnings(NbYears, , EarningsHistory) returns 53835.70</p>
                     </div>
                 </div>
             </div>
@@ -102,9 +107,9 @@
                     <div class="col-2"></div>
                     <div class="col-10">
                         <p>NbYears = 5</p>
-                        <p>Earnings history = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
-                        <p>Service history = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
-                        <p class="help-example-answer">BestAverageEarnings(NbYears, , Earnings history, Service history) returns 55261.66</p>
+                        <p>EarningsHistory = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                        <p>ServiceHistory = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
+                        <p class="help-example-answer">BestAverageEarnings(NbYears, , EarningsHistory, ServiceHistory) returns 55261.66</p>
                     </div>
                 </div>
             </div>
@@ -113,7 +118,7 @@
             <div class="help-example">
                 <div class="row help-example-title">
                     <div class=col-2><span class="highlight">Example #3</span></div>
-                    <div class="col-6"><span class="highlight">With Service history and OutOf</span></div>
+                    <div class="col-6"><span class="highlight">With Service history and Out Of</span></div>
                 </div>
 
                 <div class="row help-example-line">
@@ -121,9 +126,9 @@
                     <div class="col-10">
                         <p>NbYears = 5</p>
                         <p>OutOf = 7</p>
-                        <p>Earnings history = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
-                        <p>Service history = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
-                        <p class="help-example-answer">BestAverageEarnings(NbYears, OutOf, Earnings history, Service history) returns 43296.14</p>
+                        <p>EarningsHistory = [42750, 43718, 42307, 40404, 39843, 38539, 37860, 100000]</p>
+                        <p>ServiceHistory = [0.95, 0.99, 0.98, 0.95, 0.95, 0.93, 0.93, 0.96]</p>
+                        <p class="help-example-answer">BestAverageEarnings(NbYears, OutOf, EarningsHistory, ServiceHistory) returns 43296.14</p>
                     </div>
                 </div>
             </div>
