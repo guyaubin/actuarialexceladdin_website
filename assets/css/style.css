@@ -28,6 +28,7 @@
   --blue: blue;
 
   --BGColor: #ffa70f;
+  --BGColorDimmed: rgba(255, 167, 15, 0.35);
   --BGHelp: #e6eae1;
   --BGHelpAssumption: #d3f3c3;
   --BGHelpTable: #bcc0b8;
@@ -496,6 +497,20 @@ section {
 
 .hero .hero-img {
   text-align: right;
+}
+
+.hero .hero-testimony {
+  background-color: var(--BGColorDimmed);
+  color: var(--darkColor);
+  margin-top: 10px;
+  border-radius: 10px;;
+  text-align: left;
+  font-size: small;
+  font-style: italic;
+  padding: 10px 15px 1px 15px;
+}
+.hero .hero-testimony .author {
+  font-style: normal;
 }
 
 @media (min-width: 1024px) {

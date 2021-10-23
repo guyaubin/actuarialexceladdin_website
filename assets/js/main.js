@@ -7,11 +7,17 @@
 (function() {
   "use strict";
 
+  // var myCarousel = document.querySelector('#carousel01');
+  // var carousel = new bootstrap.Carousel(myCarousel, {
+  //   interval: 5000,
+  //   wrap: true
+  // });
+
   /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
-    el = el.trim()
+    el = el.trim();
     if (all) {
       return [...document.querySelectorAll(el)]
     } else {
