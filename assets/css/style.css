@@ -1340,3 +1340,7 @@ section.help {
 .help div.see-alse a:hover {
   font-weight: 600;
 }
+
+.carousel {
+  padding-bottom: 30px;
+}
