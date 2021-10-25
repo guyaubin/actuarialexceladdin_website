@@ -1344,3 +1344,7 @@ section.help {
 .carousel {
   padding-bottom: 30px;
 }
+
+.testimonial .testimonial-text::before {
+  content: "bozo";
+}
