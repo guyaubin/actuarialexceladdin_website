@@ -847,7 +847,7 @@ section {
   list-style: none;
 }
 
-.faq .faq-list li + li {
+.faq .faq-list li:not + li {
   margin-top: 15px;
 }
 
@@ -856,6 +856,16 @@ section {
   background: var(--white);
   border-radius: 4px;
   position: relative;
+}
+
+.faq ul.faq-answer-list {
+  padding: 0;
+  list-style-type: disc;
+}
+
+.faq ul.faq-answer-list li {
+  margin: 0 0 0 50px;
+  padding: 0 0 0 20px;
 }
 
 .faq .faq-list a:not(.email) {
