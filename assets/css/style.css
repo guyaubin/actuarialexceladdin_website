@@ -511,6 +511,12 @@ section {
 }
 .hero .hero-testimony .author {
   font-style: normal;
+  margin-bottom: 0;
+}
+.hero .hero-testimony .company {
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 @media (min-width: 1024px) {
@@ -685,7 +691,9 @@ section {
   padding: 1px 10px 1px 10px;
 }
 
-.tutorials a.btn-download {
+.tutorials a.btn-download,
+.help a.btn-download
+ {
   font-size: 12px;
   background: var(--BGColor);
   text-align: right;
@@ -694,7 +702,8 @@ section {
   border-radius: 6px;
 }
 
-.tutorials a.btn-download:hover {
+.tutorials a.btn-download:hover,
+.help a.btn-download:hover {
   color: var(--white);
 }
 
@@ -1349,6 +1358,20 @@ section.help {
 .help p.see-also a:hover,
 .help div.see-alse a:hover {
   font-weight: 600;
+}
+
+.help a.btn-download
+ {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--darkColor);
+  background: var(--BGColor);
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.help a.btn-download:hover {
+  color: var(--white);
 }
 
 .carousel {
