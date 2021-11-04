@@ -45,89 +45,94 @@
 
             <div class="help-table function-definition">
                 <div class="row help-table-title">
-                    <div class="col-2">Parameters</div>
+                    <div class="col-3">Parameters</div>
                     <div class="col-1">Default</div>
-                    <div class="col-9">Description</div>
+                    <div class="col-8">Description</div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">Age1 *</div>
+                    <div class="col-3 help-param-required">Age1 *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Age of annuitant at valuation, <span class="note">fraction allowed</span></div>
+                    <div class="col-8">Age of annuitant at valuation, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">LX1 *</div>
+                    <div class="col-3 help-param-required">LX1 *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9"><a href="lx.html" target="_blank">LX function</a>: annuitant's mortality</div>
+                    <div class="col-8"><a href="lx.html" target="_blank">LX function</a>: annuitant's mortality</div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">interest *</div>
+                    <div class="col-3 help-param-required">interest *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Interest rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                    <div class="col-8">Interest rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Age2</div>
+                    <div class="col-3">Age2</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Age of co-annuitant at valuation date, <span class="note">fraction allowed</span></div>
+                    <div class="col-8">Age of co-annuitant at valuation date, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">LX2</div>
+                    <div class="col-3">LX2</div>
                     <div class="col-1">--</div>
-                    <div class="col-9"><a href="lx.html" target="_blank">LX function</a>: co-annuitant's mortality</div>
+                    <div class="col-8"><a href="lx.html" target="_blank">LX function</a>: co-annuitant's mortality</div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Reversion</div>
+                    <div class="col-3">Reversion</div>
                     <div class="col-1">0 %</div>
-                    <div class="col-9">% reverting to co-annuitant after annuitant's death</div>
+                    <div class="col-8">% reverting to co-annuitant after annuitant's death</div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Guarantee</div>
+                    <div class="col-3">Guarantee</div>
                     <div class="col-1">0</div>
-                    <div class="col-9">Payments guaranteed (in years), <span class="note">fraction allowed</span></div>
+                    <div class="col-8">Payments guaranteed (in years), <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Deferred</div>
+                    <div class="col-3">Deferred</div>
                     <div class="col-1">0</div>
-                    <div class="col-9">Deferment of first annuity payment, <span class="note">fraction allowed</span></div>
+                    <div class="col-8">Deferment of first annuity payment, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Years paid</div>
+                    <div class="col-3">Years paid</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">Period of payments (in years), <span class="highlight">by default, ends at age 120</span>, <span class="note">fraction allowed</span></div>
+                    <div class="col-8">Period of payments (in years), <span class="highlight">by default, ends at age 120</span>, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Indexation</div>
+                    <div class="col-3">Indexation</div>
                     <div class="col-1">0 %</div>
-                    <div class="col-9">Indexation rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                    <div class="col-8">Indexation rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">First age index</div>
+                    <div class="col-3">First age index</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">First age annuity is indexed, <span class="highlight">by default, starts at Age1 + Deferred + 1</span>, <span class="note">fraction allowed</span></div>
+                    <div class="col-8">First age annuity is indexed, <span class="highlight">by default, starts at Age1 + Deferred + 1</span>, <span class="note">fraction allowed</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Frequency</div>
+                    <div class="col-3">Frequency</div>
                     <div class="col-1">12</div>
-                    <div class="col-9">Number of payments per year, <span class="note">must be an integer, e.g.: 1, 12, 24, 26, 52</span></div>
+                    <div class="col-8">Number of payments per year, <span class="note">must be an integer, e.g.: 1, 12, 24, 26, 52</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Due</div>
+                    <div class="col-3">Due</div>
                     <div class="col-1">True</div>
-                    <div class="col-9">False: first payment further deferred by 1/Frequency (in years)</div>
+                    <div class="col-8">False: first payment further deferred by 1/Frequency (in years)</div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Qx-pre</div>
+                    <div class="col-3">Qx-pre</div>
                     <div class="col-1">True</div>
-                    <div class="col-9">True: Mortality during deferment period <span class="highlight">(on annuitant only)</span></div>
+                    <div class="col-8">True: Mortality during deferment period <span class="highlight">(on annuitant only)</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Certain reduced</div>
+                    <div class="col-3">Certain reduced</div>
                     <div class="col-1">False</div>
-                    <div class="col-9">True: Guaranteed pension reduced after annuitant's death <span class="highlight">as per 'Reversion'</span></div>
+                    <div class="col-8">True: Guaranteed pension reduced after annuitant's death <span class="highlight">as per 'Reversion'</span></div>
                 </div>
                 <div class="row">
-                    <div class="col-2">Percentage married</div>
+                    <div class="col-3">Percentage married</div>
                     <div class="col-1">100 %</div>
-                    <div class="col-9">% married at retirement <span class="highlight">, used in conjunction with 'Reversion' and 'Guarantee'</span></div>
+                    <div class="col-8">% married at retirement <span class="highlight">, used in conjunction with 'Reversion' and 'Guarantee'</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Fraction first indexation</div>
+                    <div class="col-1">1</div>
+                    <div class="col-8">Fraction, between 0 and 1, applied to the first indexation</div>
                 </div>
             </div>
 
