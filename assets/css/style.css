@@ -616,6 +616,175 @@ section {
   transform: translateX(5px);
 }
 
+
+
+/*--------------------------------------------------------------
+# Workbooks
+--------------------------------------------------------------*/
+.workbooks .workbook-box {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  height: 100%;
+  padding: 20px 30px;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.workbooks .workbook-box .icon {
+  font-size: 20px;
+  padding: 40px 20px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 25px;
+  /* display: inline-block; */
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.workbooks .workbook-box h3 {
+  color: #444444;
+  font-weight: 700;
+}
+
+.workbooks .workbook-box .download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 20px;
+}
+
+.workbooks .workbook-box .download i {
+  line-height: 0;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.workbooks .workbook-box.blue {
+  border-bottom: 3px solid #2db6fa;
+}
+
+.workbooks .workbook-box.blue .icon {
+  color: #2db6fa;
+  background: #dbf3fe;
+}
+
+.workbooks .workbook-box.blue .download {
+  color: #2db6fa;
+}
+
+.workbooks .workbook-box.blue:hover {
+  background: #2db6fa;
+}
+
+.workbooks .workbook-box.orange {
+  border-bottom: 3px solid #f68c09;
+}
+
+.workbooks .workbook-box.orange .icon {
+  color: #f68c09;
+  background: #fde3c4;
+}
+
+.workbooks .workbook-box.orange .download {
+  color: #f68c09;
+}
+
+.workbooks .workbook-box.orange:hover {
+  background: #f68c09;
+}
+
+.workbooks .workbook-box.green {
+  border-bottom: 3px solid #08da4e;
+}
+
+.workbooks .workbook-box.green .icon {
+  color: #08da4e;
+  background: #cffddf;
+}
+
+.workbooks .workbook-box.green .download {
+  color: var(--BGColor);
+}
+
+.workbooks .workbook-box.green .download:hover {
+  color: black;
+  /* font-size: 1.2em; */
+}
+
+/* .workbooks .workbook-box.green:hover {
+  background: #08da4e;
+} */
+
+.workbooks .workbook-box.red {
+  border-bottom: 3px solid #e9222c;
+}
+
+.workbooks .workbook-box.red .icon {
+  color: #e9222c;
+  background: #fef7f8;
+}
+
+.workbooks .workbook-box.red .download {
+  color: #e9222c;
+}
+
+.workbooks .workbook-box.red:hover {
+  background: #e9222c;
+}
+
+.workbooks .workbook-box.purple {
+  border-bottom: 3px solid #b50edf;
+}
+
+.workbooks .workbook-box.purple .icon {
+  color: #b50edf;
+  background: #f8e4fd;
+}
+
+.workbooks .workbook-box.purple .download {
+  color: #b50edf;
+}
+
+.workbooks .workbook-box.purple:hover {
+  background: #b50edf;
+}
+
+.workbooks .workbook-box.pink {
+  border-bottom: 3px solid #f51f9c;
+}
+
+.workbooks .workbook-box.pink .icon {
+  color: #f51f9c;
+  background: #feecf7;
+}
+
+.workbooks .workbook-box.pink .download {
+  color: #f51f9c;
+}
+
+.workbooks .workbook-box.pink:hover {
+  background: #f51f9c;
+}
+
+/* .workbooks .workbook-box:hover h3, .workbooks .workbook-box:hover p, .workbooks .workbook-box:hover .download {
+  color: #fff;
+} */
+
+/* .workbooks .workbook-box:hover .icon {
+  background: #fff;
+} */
+
+.workbooks .bullet {
+  margin-bottom: 5px;
+}
+
+.workbooks .workbook-box.green p.bullet:hover {
+  background-color: #cffddf;
+  border-radius: 5px;
+}
+
 /*--------------------------------------------------------------
 # Tutorials (from the Medicio BootstrapMade template)
 --------------------------------------------------------------*/

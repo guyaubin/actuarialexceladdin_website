@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Canada Mortality</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container function-definition">
+            <div class="row">
+                <div class="col-8"><h1>Canada - Mortality and projection scales</h1></div>
+                <div class="col-4 text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <p>The <a href="lx.html" target="_blank">LX or LX2 function</a> accepts the following Canadian mortality tables and projection scales:</p>
+            <div><h3>Mortality tables</h3></div>
+            <dl class="left-margin">
+                <dt>CPM2014:</dt><dd>Canadian Pensioners’ Mortality (CPM) 2014, composite of Public and Private Sector</dd>
+                <dt>CPM2014PRIV:</dt><dd>Canadian Pensioners’ Mortality (CPM) 2014, Prtivate Sector</dd>
+                <dt>CPM2014PUBL:</dt><dd>Canadian Pensioners’ Mortality (CPM) 2014, Public Sector</dd>
+                <dt>RREGOP:</dt><dd>.....</dd>
+                <dt>GAM94S:</dt><dd>Group Annuity Mortality Static 1994</dd>
+                <dt>UP94:</dt><dd>1994 Uninsured Pensioner (UP-94), formerly 1994 GAM Basic</dd>
+                <dt class="highlight">UP94ICA **:</dt><dd>UP94 projected to 2015 with scale AA (ECH_AA)</dd>
+                <dt>ICA2020:</dt><dd>UP94 projected to 2020 with scale AA (ECH_AA)</dd>
+                <dt>UP84:</dt><dd>Uninsured Pensioner Mortality 1984</dd>
+                <dt>GAM83:</dt><dd>1983 Group Annuity Mortality (GAM) Table</dd>
+                <dt>GAM83ITA:</dt><dd>GAM83 (1983 GAM), unisex, 40% male + 40% female<small> (Prescribed by Canadian Income Tax Regulations to determine maximum funding contributions for significant shareholders registered pension plans)</small></dd>
+                <dt>GAM71:</dt><dd>1971 Group Annuity Mortality (GAM) Table</dd>
+                <dt>NO_QX:</dt><dd>No mortality before last age of the mortality table (age 120)</dd>
+                <dt>IAM71:</dt><dd>Individual Annuity Mortality 1971</dd>
+                <dt>CANADA19:</dt><dd>Life Table, Canada population, 2017/2019 <small>(CANADA18, CANADA17 also available)</small></dd>
+                <dt>ONTARIO19:</dt><dd>Life Table, Ontario population, 2017/2019 <small>(ONTARIO18, ONTARIO17 also available)</small></dd>
+                <dt>QUEBEC19:</dt><dd>Life Table, Québec population, 2017/2019 <small>(QUEBEC18, QUEBEC17 also available)</small></dd>
+            </dl>
+            <p class="highlight">**: The UP94ICA is the default mortality table of the <a href="lx.html" target="_blank">LX or LX2 function</a>.</p>
+
+            <h3>Projection scales <small>(2D - Age and year related)</small></h3>
+            <p>A 2D projection scale contains the mortality improvement for each age of 
+                the mortality table and for each year, resulting in multiple improvement rates 
+                for each age of the mortality table.</p>
+            <ul style="list-style-type:none;">
+                <li>ECH_MI2017</li>
+                <li>ECH_CPM_B</li>
+                <li>ECH_CPM_A</li>
+            </ul>
+
+            <br>
+            <h3>Projection scales <small>(1D - Age related)</small></h3>
+            <p>A 1D projection scale contains the yearly mortality improvement 
+                rate for each mortality rate (i.e. one improvement rate for each age of the mortality table).
+                The number of years of projection is equal to 'Year of valuation' minus 'Projection base year'.</p>
+            <ul style="list-style-type:none;">
+                <li>ECH_AA</li>
+                <li>ECH_H</li>
+                <li>ECH_BB</li>
+                <li>ECH_A1</li>
+                <li>ECH_CPMB1D2014</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

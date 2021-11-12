@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>LX</title>
+  <title>LX, LX_aea</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -27,18 +27,19 @@
     <section id="help" class="help">
         <div class="container">
             <div class="row">
-                <div class="col"><h1>LX function</h1></div>
+                <div class="col"><h1>LX or LX_aea function</h1></div>
                 <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
             </div>
 
             <a href="../../#tutorials" target="_blank">See the tutorial on Youtube</a>
 
-            <p class="mb-2">The <span class="highlight">LX function</span> returns a vector of L<sub>x</sub> from age or x = 0 to 120 (years), where L<sub>x</sub> = L<sub>x-1</sub> x p<sub>x-1</sub> = L<sub>x-1</sub> x (1 - q<sub>x-1</sub>).</p>
-            <p class="function-definition mt-0">The <span class="highlight">LX function</span> is never used alone, it is always a parameter of one of the following functions: 
+            <p class="mb-2">The <span class="highlight">LX or LX_aea<sup>*</sup> function</span> returns a vector of L<sub>x</sub> from age or x = 0 to 120 (years), where L<sub>x</sub> = L<sub>x-1</sub> x p<sub>x-1</sub> = L<sub>x-1</sub> x (1 - q<sub>x-1</sub>).</p>
+            <p class="function-definition mt-0">The <span class="highlight">LX or LX_aea function</span> is never used alone, it is always a parameter of one of the following functions: 
                 <a href="js.html" target="_blank">JS</a>, <a href="lifeins.html" target="_blank">LifeIns</a>, 
                 <a href="tpx.html" target="_blank">TPX</a>, <a href="tqx.html" target="_blank">TQX</a>, <a href="getlx.html" target="_blank">GetLx</a>, <a href="certain.html" target="_blank">CERTAIN</a>.</p>
 
-            <p class="help-required">* : Required parameter</p>
+            <p class="help-required mb-0">* : Starting with version 4.5.3, LX can be called using LX or LX2.</p>
+            <p class="help-required">** : Required parameter</p>
 
             <div class="help-table function-definition">
                 <div class="row help-table-title">
@@ -47,14 +48,14 @@
                     <div class="col-9">Description</div>
                 </div>
                 <div class="row">
-                    <div class="col-2 help-param-required">Sex *</div>
+                    <div class="col-2 help-param-required">Sex<sup>**</sup></div>
                     <div class="col-1">--</div>
                     <div class="col-9">1: Male q<sub>x</sub>, 2: Female q<sub>x</sub>, 1.75: 75% Female+ 25% Male, etc.</div>
                 </div>
                 <div class="row">
                     <div class="col-2">Qx table</div>
                     <div class="col-1">UP94ICA</div>
-                    <div class="col-9"><a href="tables_and_scales.html" target="_blank">Mortality table</a></div>
+                    <div class="col-9">Mortality table, <a href="tables_and_scales_can.html" target="_blank">Canada</a> and <a href="tables_and_scales_usa.html" target="_blank">U.S.A.</a></div>
                 </div>
                 <div class="row">
                     <div class="col-2">Age move</div>
@@ -74,7 +75,7 @@
                 <div class="row">
                     <div class="col-2">Projection scale</div>
                     <div class="col-1">--</div>
-                    <div class="col-9"><a href="tables_and_scales.html" target="_blank">Projection scale</a> <span class="note">(must be set when 'Projection' is True)</span></div>
+                    <div class="col-9">Projection scale, <a href="tables_and_scales_can.html" target="_blank">Canada</a> and <a href="tables_and_scales_usa.html" target="_blank">U.S.A.</a> <span class="note">(must be set when 'Projection' is True)</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2">Projection base year</div>
