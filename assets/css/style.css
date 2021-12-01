@@ -1438,6 +1438,11 @@ section.help {
 .help .help-param-required {
   font-weight: 600;
 }
+.help .help-param {
+  font-family: 'Courier New', monospace;
+  font-weight: 800;
+  color: red;
+}
 
 .help a {
   font-size: 36px;
@@ -1500,7 +1505,8 @@ section.help {
 }
 
 .help .highlight {
-  color: var(--helpNoteColor);
+  /* color: var(--helpNoteColor); */
+  color: var(--mainColor);
   font-weight: 600;
 }
 

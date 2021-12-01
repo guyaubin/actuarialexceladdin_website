@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MonthlyStat</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>MonthlyStat function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <!-- <a href="../../#tutorials" target="_blank">See the tutorial on Youtube</a>
+            <a class="btn-download" href="../img/video/cia-cheat-sheet.pdf" download="cia-cheat-sheet.pdf">Download the 'Cheat Sheet' (pdf)</a> -->
+
+            <p>The <span class="highlight">MonthlyStat function</span> returns a monthly statistics from the user's personal workbook <span class="highlight">my_aea.xlsm.</span></p>
+
+            <p class="see-also mt-4">See also: <a href="yearlystat.html" target="_blank">YearlyStat</a>, <a href="dailystat.html" target="_blank">DailyStat</a></p>
+
+            <p class="help-required mt-4">No required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Date</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Date of the statistics, only year and month are considered<span class="note">, e.g. May 2, 2020 and May 17, 2020 will both return the May 2020 statistics</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Stat No</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Number assigned to the statistics, must be an integer<span class="note">, default value 0 returns the code's description</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Code</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">See table below<span class="note">, default value 0 returns the statistics itself</span></div>
+                </div>
+            </div>
+            <br>
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-1">Code</div>
+                    <div class="col-11">Description</div>
+                </div>
+
+                <div class="row"><div class="col-1 assumption">0</div><div class="col-11 assumption">Statistics</div></div>
+                <div class="row"><div class="col-1 assumption">1</div><div class="col-11 assumption">Name</div></div>
+                <div class="row"><div class="col-1 assumption">2</div><div class="col-11 assumption">Info type (integer, real number, boolean, text)</div></div>
+                <div class="row"><div class="col-1 assumption">3</div><div class="col-11 assumption">Description</div></div>
+                <div class="row"><div class="col-1 assumption">4</div><div class="col-11 assumption">Source</div></div>
+                <div class="row"><div class="col-1 assumption">5</div><div class="col-11 assumption">Start date</div></div>
+                <div class="row"><div class="col-1 assumption">6</div><div class="col-11 assumption">End date</div></div>
+
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Examples</span></div>
+                    <div class="col-9">Assuming StatNo=33, returns the number (in thousands) of passengers on Canadian airlines in a given month.</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p>Date1 = date(2021, 9, 15)</p>
+                        <p class="help-example-answer">MonthlyStat(Date1, 33) returns 2939</p>
+                        <br>
+                        <p class="help-example-answer">MonthlyStat(0, 33, 1) returns "Flight passengers CAN"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 33, 2) returns "integer"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 33, 3) returns "Number of passengers on Canadian airlines
+                            (x 1,000)"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 33, 4) returns "https://www150.statcan.gc.ca/t1/tbl1/fr/tv.action?pid=2310007901"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 33, 5) returns 199001</p>
+                        <p class="help-example-answer">MonthlyStat(0, 33, 6) returns 202109</p>
+                        <br>
+                        <p class="help-example-answer">MonthlyStat(0, 0, 0) returns "Statistics"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 0, 1) returns "Name"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 0, 2) returns "Type"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 0, 3) returns "Description"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 0, 4) returns "Source"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 0, 5) returns "Start"</p>
+                        <p class="help-example-answer">MonthlyStat(0, 0, 6) returns "End"</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>

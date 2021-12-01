@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>YearlyStat</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>YearlyStat function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <!-- <a href="../../#tutorials" target="_blank">See the tutorial on Youtube</a>
+            <a class="btn-download" href="../img/video/cia-cheat-sheet.pdf" download="cia-cheat-sheet.pdf">Download the 'Cheat Sheet' (pdf)</a> -->
+
+            <p>The <span class="highlight">YearlyStat function</span> returns a yearly statistics from the user's personal workbook <span class="highlight">my_aea.xlsm.</span></p>
+
+            <p class="see-also mt-4">See also: <a href="monthlystat.html" target="_blank">MonthlyStat</a>, <a href="dailystat.html" target="_blank">DailyStat</a></p>
+
+            <p class="help-required mt-4">No required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-2">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-9">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Year</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Year of the statistics</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Stat No</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">Number assigned to the statistics, must be an integer<span class="note">, default value 0 returns the code's description</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">Code</div>
+                    <div class="col-1">0</div>
+                    <div class="col-9">See table below<span class="note">, default value 0 returns the statistics itself</span></div>
+                </div>
+            </div>
+            <br>
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-1">Code</div>
+                    <div class="col-11">Description</div>
+                </div>
+
+                <div class="row"><div class="col-1 assumption">0</div><div class="col-11 assumption">Statistics</div></div>
+                <div class="row"><div class="col-1 assumption">1</div><div class="col-11 assumption">Name</div></div>
+                <div class="row"><div class="col-1 assumption">2</div><div class="col-11 assumption">Info type (integer, real number, boolean, text)</div></div>
+                <div class="row"><div class="col-1 assumption">3</div><div class="col-11 assumption">Description</div></div>
+                <div class="row"><div class="col-1 assumption">4</div><div class="col-11 assumption">Source</div></div>
+                <div class="row"><div class="col-1 assumption">5</div><div class="col-11 assumption">Start date</div></div>
+                <div class="row"><div class="col-1 assumption">6</div><div class="col-11 assumption">End date</div></div>
+
+            </div>
+
+            <br>
+            <div class="help-example">
+                <div class="row help-example-title">
+                    <div class=col-2><span class="highlight">Examples</span></div>
+                    <div class="col-9">Assuming StatNo=102, returns the World population in a given year.</div>
+                </div>
+                <div class="row help-example-line">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <p class="help-example-answer">YearlyStat(2020, 102) returns 7794798739</p>
+                        <br>
+                        <p class="help-example-answer">YearlyStat(0, 102, 1) returns "World Population"</p>
+                        <p class="help-example-answer">YearlyStat(0, 102, 2) returns "integer"</p>
+                        <p class="help-example-answer">YearlyStat(0, 102, 3) returns "self explanatory"</p>
+                        <p class="help-example-answer">YearlyStat(0, 102, 4) returns "https://www.worldometers.info/world-population/world-population-by-year/"</p>
+                        <p class="help-example-answer">YearlyStat(0, 102, 5) returns 1951</p>
+                        <p class="help-example-answer">YearlyStat(0, 102, 6) returns 2020</p>
+                        <br>
+                        <p class="help-example-answer">YearlyStat(0, 0, 0) returns "Statistics"</p>
+                        <p class="help-example-answer">YearlyStat(0, 0, 1) returns "Name"</p>
+                        <p class="help-example-answer">YearlyStat(0, 0, 2) returns "Type"</p>
+                        <p class="help-example-answer">YearlyStat(0, 0, 3) returns "Description"</p>
+                        <p class="help-example-answer">YearlyStat(0, 0, 4) returns "Source"</p>
+                        <p class="help-example-answer">YearlyStat(0, 0, 5) returns "Start"</p>
+                        <p class="help-example-answer">YearlyStat(0, 0, 6) returns "End"</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>

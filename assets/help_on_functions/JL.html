@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>JL</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="../img/logo-excel-addin.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="help" class="help">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h1>JL function</h1></div>
+                <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
+            </div>
+
+            <!-- <a href="../../#tutorials" target="_blank">See the tutorial on Youtube</a> -->
+
+            <p class="mb-0 mt-4">The <span class="highlight">JL function</span> returns the value at Age1/Age2 of a joint and life annuity ceasing on the first death of $1 of pension per year starting in <span class="">Deferred</span> years, discounted with interest and mortality and payable:</p>
+            <ul>
+                <li>during the annuitant's and co-annuitant's shortest lifetime OR ceasing after a number of years,</li>
+                <li>with ou without a guaranteed period, and</li>
+                <li>with or without indexation.</li>
+            </ul>
+
+            <p class="see-also">See also <a href="JS.html" target="_blank">JS</a> to calculate a single life annuity or an annuity ceasing on second death.</p>
+
+
+            <p class="help-required mt-4">* : Required parameter</p>
+
+            <div class="help-table function-definition">
+                <div class="row help-table-title">
+                    <div class="col-3">Parameters</div>
+                    <div class="col-1">Default</div>
+                    <div class="col-8">Description</div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">Interest *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">Interest rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">Age1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">Age of annuitant at valuation, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">LX1 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8"><a href="lx.html" target="_blank">LX or LX_aea function</a>: annuitant's mortality</div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">Age2 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">Age of co-annuitant at valuation date, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 help-param-required">LX2 *</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8"><a href="lx.html" target="_blank">LX or LX_aea function</a>: co-annuitant's mortality</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Deferred</div>
+                    <div class="col-1">0</div>
+                    <div class="col-8">Deferment of first annuity payment (in years), <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Guarantee</div>
+                    <div class="col-1">0</div>
+                    <div class="col-8">Payments guaranteed (in years), <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Years paid</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">Period of payments (in years), <span class="highlight">by default, ends at age 120</span>, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Indexation</div>
+                    <div class="col-1">0 %</div>
+                    <div class="col-8">Indexation rate(s): single rate or <a href="vector.html" target="_blank">vector of rates</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">First age index</div>
+                    <div class="col-1">--</div>
+                    <div class="col-8">First age annuity is indexed (annuitant's age), <span class="highlight">by default, starts at Age1 + Deferred + 1</span>, <span class="note">fraction allowed</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Fraction first indexation</div>
+                    <div class="col-1">1</div>
+                    <div class="col-8">Fraction, between 0 and 1, applied to the first indexation</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Frequency</div>
+                    <div class="col-1">12</div>
+                    <div class="col-8">Number of payments per year, <span class="note">must be an integer, e.g.: 1, 12, 24, 26, 52</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Due</div>
+                    <div class="col-1">True</div>
+                    <div class="col-8">False: first payment further deferred by 1/Frequency (in years)</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Qx-pre 1</div>
+                    <div class="col-1">True</div>
+                    <div class="col-8">True: Mortality of <span class="highlight">annuitant</span> during deferment period</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Qx-pre 2</div>
+                    <div class="col-1">True</div>
+                    <div class="col-8">True: Mortality of <span class="highlight">co-annuitant</span> during deferment period</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
