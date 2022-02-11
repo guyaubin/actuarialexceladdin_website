@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Actuarial Excel Addin</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="assets/img/logo-excel-addin.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.4.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body onload="showStat()">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-excel-addin.png" alt="">
+        <span>Actuarial Excel Addin</span>
+      </a>
+
+      <nav id="navbar" class="navbar mb-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#free-trial">Download</a></li>
+          <li><a class="nav-link scrollto" href="index.html#workbooks">Workbooks</a></li>
+          <li><a class="nav-link scrollto" href="index.html#tutorials">Tutorials</a></li>
+          <li class="dropdown"><a class="active" href="#"><span>Statistics</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="stat-cia.html">Pension Commuted Values Assumptions</a></li>
+              <li><a href="stat-tax.html">Income Tax Limits - Pension</a></li>
+              <li><a href="#">Old Age Security</a></li>
+              <li><a href="stat-cpp.html">Canada Pension Plan</a></li>
+              <li><a href="stat-qpp.html">Québec Pension Plan</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="index.html#faq">F.A.Q</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar --> 
+    </div>
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <h5 class="smarter" style="margin-left: 45px;"><i>Work smarter. Act faster.  See further.</i></h5>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <!-- ======= STAT-OAS Section ======= -->
+    <section id="stat-oas" class="statistics">
+
+      <div class="container-fluid container-xl" style="margin-top: 50px;">
+        <div class="title">
+          <h4>Old Age Security - Canada</h4>
+          <p class="mb-4">The <a href="https://www.canada.ca/en/services/benefits/publicpensions/cpp/old-age-security.html" target="_blank">Old Age Security (OAS)</a>  pension is a monthly payment you can get if you are 65 and older.</p>
+          <p>The <strong>Actuarial Excel Addin</strong> returns these statistics and many more ready to be incorporated into your calculations.</p>
+        </div>
+        <div class="row gx-0">
+          <div class="col-lg-6 d-flex flex-column justify-content-top text-center" >
+            <form>
+              <div class="row mt-2">
+                <div class="col-2 form-group">
+                  <label for="yearInput">Year</label>
+                  <select class="form-control text-center" id="yearInput" size="1">
+                  </select>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn mt-4" onclick=showStat()>Get information</button>
+                </div>
+              </form>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th id="jsYear"></th>
+                </tr>
+                </thead>
+              <tbody>
+                <tr>
+                  <th>Monthly pension</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right">1<sup>st</sup> Quarter</td>
+                  <td id="jsOAS1"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right">2<sup>nd</sup> Quarter</td>
+                  <td id="jsOAS2"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right">3<sup>rd</sup> Quarter</td>
+                  <td id="jsOAS3"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right">4<sup>th</sup> Quarter</td>
+                  <td id="jsOAS4"></td>
+                </tr>
+                <tr>
+                  <th>Clawback threshold</th>
+                  <td id="jsClawback"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End STAT-OAS Section -->
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8 col-md-12">       
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-contact text-md-end">
+            <h4>Contact Us</h4>
+            <p>
+              Montréal, Québec, Canada<br>
+              +1 514 952 2917<br>
+              <a href="mailto:admin@actuarialexceladdin.com?subject=Actuarial Excel Addin - Enquiry&cc=guyaubin07@gmail.com">admin@actuarialexceladdin.com</a><br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Aubin Consulting Actuary</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/api-utils.js"></script>
+  <script src="assets/js/api-oas.js"></script>
+</body>
+</html>

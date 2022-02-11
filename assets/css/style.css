@@ -17,6 +17,7 @@
   --bodyColor: #444444;
   --mainColor: #128045;
   --lightColor: #53e974;
+  --lightColorDimmed: rgba(83, 233, 116, 0.20);
   --darkColor: #094826;
   --darkColorDimmed: rgba(9, 72, 38, 0.75);
   --helpNoteColor: #666;
@@ -335,10 +336,12 @@ section {
 
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
-    left: -90%;
+    left: 90%;
+    color: var(--darkColor);
   }
   .navbar .dropdown .dropdown:hover > ul {
-    left: -100%;
+    left: 100%;
+    color: var(--darkColor);
   }
 }
 
@@ -1555,4 +1558,60 @@ section.help {
 
 .testimonial .testimonial-text::before {
   content: "bozo";
+}
+
+
+/*--------------------------------------------------------------
+# Statistics
+--------------------------------------------------------------*/
+
+.statistics form
+ {
+  font-size: 1.1rem;
+ }
+
+.statistics .title {
+  background-color: var(--lightColorDimmed);
+  padding: 10px 20px 1px 20px;
+  border-radius: 10px;; 
+}
+.statistics button
+ {
+  font-size: 20px;
+  background: var(--BGColor);
+  text-align: right;
+  padding: 5px 10px;
+  margin: 0 0 50px 0;
+  border-radius: 6px;
+}
+
+.statistics button:hover {
+  /* background: var(--lightColor); */
+  color: var(--white);
+}
+
+.statistics table {
+  text-align: right;
+}
+
+.statistics table tr {
+  line-height: 10px;
+}
+
+.statistics table td:nth-child(1),
+.statistics table th:nth-child(1) {
+  text-align: left;
+}
+
+.statistics a {
+  text-decoration: underline;   
+}
+
+.statistics .quote {
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.statistics table .right-align td {
+  text-align: right;
 }
