@@ -43,29 +43,27 @@ function getMonth(m) {
 
 function cleanInnerHTML(json, key, is_number = false, precision = 2, style = "percent") {
     if (json.hasOwnProperty(key)) {
-        if (json[key]) {
-            if (is_number && style === "percent") {
-                let num = Number(json[key]).toLocaleString('en-US', {
-                    minimumFractionDigits: precision,
-                    maximumFractionDigits: precision,
-                    style: "percent"
-                });
-                return num;
-            } else if (is_number && style === "currency") {
-                let num = Number(json[key]).toLocaleString('en-US', {
-                    minimumFractionDigits: precision,
-                    maximumFractionDigits: precision
-                });
-                return "$" + num;
-            } else if (is_number) {
-                let num = Number(json[key]).toLocaleString('en-US', {
-                    minimumFractionDigits: precision,
-                    maximumFractionDigits: precision
-                });
-                return num;
-            } else {
-                return json[key];
-            }
+        if (is_number && style === "percent") {
+            let num = Number(json[key]).toLocaleString('en-US', {
+                minimumFractionDigits: precision,
+                maximumFractionDigits: precision,
+                style: "percent"
+            });
+            return num;
+        } else if (is_number && style === "currency") {
+            let num = Number(json[key]).toLocaleString('en-US', {
+                minimumFractionDigits: precision,
+                maximumFractionDigits: precision
+            });
+            return "$" + num;
+        } else if (is_number) {
+            let num = Number(json[key]).toLocaleString('en-US', {
+                minimumFractionDigits: precision,
+                maximumFractionDigits: precision
+            });
+            return num;
+        } else {
+            return json[key];
         }
     }
     return "---";

@@ -35,7 +35,6 @@ function getPeriod(json) {
 
 const getResponse = response => response.json();
 const processJSON = json => {
-    console.log(json);
     db.innerHTML = cleanInnerHTML(json, 'db', is_number=true, precision=2, style="currency");
     dc.innerHTML = cleanInnerHTML(json, 'dc', is_number=true, precision=0, style="currency");
     rrsp.innerHTML = cleanInnerHTML(json, 'rrsp', is_number=true, precision=0, style="currency");
@@ -49,7 +48,6 @@ function showStat() {
     yyyy = document.getElementById("yearInput").value;
     let url = new URL(url_api_root + 'tax');
     url.searchParams.set('year', yyyy);
-    console.log("url - 17h47: "+ url);
     fetch(url)
         .then(getResponse)
         .then(processJSON);

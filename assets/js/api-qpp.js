@@ -31,7 +31,6 @@ yearParent.value = yyyy;
 
 const getResponse = response => response.json();
 const processJSON = json => {
-    console.log(json);
     ympe1.innerHTML = cleanInnerHTML(json, 'ympe1', is_number=true, precision=0, style="currency");
     ympe2.innerHTML = cleanInnerHTML(json, 'ympe2', is_number=true, precision=0, style="currency");
     exemption.innerHTML = cleanInnerHTML(json, 'exemption', is_number=true, precision=0, style="currency");

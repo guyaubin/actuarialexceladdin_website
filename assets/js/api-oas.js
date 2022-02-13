@@ -27,7 +27,6 @@ yearParent.value = yyyy;
 
 const getResponse = response => response.json();
 const processJSON = json => {
-    console.log(json);
     oas1.innerHTML = cleanInnerHTML(json, 'oas1', is_number=true, precision=2, style="currency");
     oas2.innerHTML = cleanInnerHTML(json, 'oas2', is_number=true, precision=2, style="currency");
     oas3.innerHTML = cleanInnerHTML(json, 'oas3', is_number=true, precision=2, style="currency");

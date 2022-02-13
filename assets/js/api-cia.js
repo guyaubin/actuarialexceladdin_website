@@ -39,7 +39,6 @@ function getPeriod(json) {
 
 const getResponse = response => response.json();
 const processJSON = json => {
-    console.log(json);
     qxTable.innerHTML = cleanInnerHTML(json, 'qxTable');
     qxScale.innerHTML = cleanInnerHTML(json, 'qxScale');
     interest1Select.innerHTML = cleanInnerHTML(json, 'rateselect', is_number=true, precision=2, style="percent");
@@ -58,7 +57,6 @@ function showStat() {
     let url = new URL(url_api_root + 'cia');
     url.searchParams.set('year', yyyy);
     url.searchParams.set('month', mm);
-    console.log("url - 17h47: "+ url);
     fetch(url)
         .then(getResponse)
         .then(processJSON);
