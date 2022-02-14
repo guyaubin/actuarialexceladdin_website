@@ -1,6 +1,7 @@
 // Function to call API
 const url_api_root = 'https://aea-api.herokuapp.com/';
 
+const inputMessage = document.getElementById('jsInputMessage');
 const qxTable = document.getElementById('jsQxTable');
 const qxScale = document.getElementById('jsQxScale');
 const interest1Select = document.getElementById('jsInterest1Select');
@@ -18,9 +19,14 @@ var yyyy = String(yearToday);
 var mm = String(monthToday);
 const yearMin = 1988;
 var yearMax = yearToday;
+var monthMax = monthToday;
 if (monthToday === 12) {
     yearMax++;
+    monthMax = 1;
     }
+else {
+    monthMax++;
+}
 var yearParent = document.getElementById("yearInput");
 
 for (let year = yearMax; year >= yearMin; year--) {
@@ -33,7 +39,7 @@ yearParent.value = yyyy;
 document.getElementById("monthInput").value = mm;
 
 function getPeriod(json) {
-    return " for " + getMonth(json.month) + ' ' + json.year;
+    return getMonth(json.month) + ' ' + json.year;
 }
 
 
@@ -54,6 +60,10 @@ const processJSON = json => {
 function showStat() {
     yyyy = document.getElementById("yearInput").value;
     mm = document.getElementById("monthInput").value;
+    if ((yyyy > yearMax) || (yyyy == yearMax && (mm > monthMax))) {
+        yyyy = yearToday;
+        mm = monthToday;
+    }
     let url = new URL(url_api_root + 'cia');
     url.searchParams.set('year', yyyy);
     url.searchParams.set('month', mm);

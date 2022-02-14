@@ -1615,3 +1615,7 @@ section.help {
 .statistics table .right-align td {
   text-align: right;
 }
+
+.statistics .error-message {
+  background-color: var(--red);
+}
