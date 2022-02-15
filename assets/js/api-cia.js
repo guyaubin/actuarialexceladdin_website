@@ -1,7 +1,8 @@
 // Function to call API
 const url_api_root = 'https://aea-api.herokuapp.com/';
 
-const inputMessage = document.getElementById('jsInputMessage');
+yearInput = document.getElementById("yearInput");
+monthInput = document.getElementById("monthInput");
 const qxTable = document.getElementById('jsQxTable');
 const qxScale = document.getElementById('jsQxScale');
 const interest1Select = document.getElementById('jsInterest1Select');
@@ -58,11 +59,20 @@ const processJSON = json => {
 }
 
 function showStat() {
-    yyyy = document.getElementById("yearInput").value;
-    mm = document.getElementById("monthInput").value;
+    yyyy = yearInput.value;
+    mm = monthInput.value;
     if ((yyyy > yearMax) || (yyyy == yearMax && (mm > monthMax))) {
         yyyy = yearToday;
         mm = monthToday;
+        yearInput.style.color = "red";
+        monthInput.style.color = "red";
+        yearInput.style.fontWeight = "bold";
+        monthInput.style.fontWeight = "bold";
+    } else {
+        yearInput.style.color = "black";
+        monthInput.style.color = "black";
+        yearInput.style.fontWeight = "normal";
+        monthInput.style.fontWeight = "normal";
     }
     let url = new URL(url_api_root + 'cia');
     url.searchParams.set('year', yyyy);
