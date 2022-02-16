@@ -57,9 +57,9 @@
           <li><a class="nav-link scrollto" href="index.html#tutorials">Tutorials</a></li>
           <li class="dropdown"><a class="active" href="#"><span>Statistics</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="stat-life.html">Life expectancy</a></li>
+              <li><a href="#">Life expectancy</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a href="#">Pension Commuted Values Assumptions</a></li>
+              <li><a href="stat-cia.html">Pension Commuted Values Assumptions</a></li>
               <li><a href="stat-tax.html">Income Tax Limits - Pension</a></li>
               <li><a href="stat-oas.html">Old Age Security</a></li>
               <li><a href="stat-cpp.html">Canada Pension Plan</a></li>
@@ -81,45 +81,101 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <!-- ======= STAT-CIA Section ======= -->
-    <section id="stat-cia" class="statistics">
+    <!-- ======= STAT-LIFE Section ======= -->
+    <section id="stat-life" class="statistics">
 
       <div class="container-fluid container-xl" style="margin-top: 50px;">
         <div class="title">
-          <h4>Pension Commuted Values Assumptions</h4>
-          <p class="mb-0">Based on <a href="https://www.cia-ica.ca/docs/default-source/standards/sp020122e.pdf" target="_blank">Section 3500</a> of the <a href="https://www.cia-ica.ca/publications/standards-of-practice" target="_blank">Standards of Practice</a> of the Canadian Institute of Actuaries.</p>
-            <p class="quote">[...] apply to [...] computation of [...] commuted values to be paid from a pension plan [...] when
-            the method of settlement is a lump sum payment in lieu of an immediate or deferred pension [...]</i></small></p>
-            <p>The <strong>Actuarial Excel Addin</strong> returns these statistics and <a class="btn-download" href="assets/img/video/cia-cheat-sheet.pdf" download="cia-cheat-sheet.pdf">many more</a> ready to be incorporated into your calculations.</p>
+          <h4>Life expectancy</h4>
+          <p class="mb-4">Calculate the life expectancy based on Canadian or United States population mortality tables.</p>
+            <p>The <strong>Actuarial Excel Addin</strong> offers actuarial functions based on mortality tables (69) and projection scales (15) from <a href="assets/help_on_functions/tables_and_scales_can.html" target="_blank">Canada</a> and <a href="assets/help_on_functions/tables_and_scales_usa.html" target="_blank">U.S.A.</a></p>
         </div>
         <div class="row gx-0">
-          <div class="col-lg-6 d-flex flex-column justify-content-top text-center" >
+          <div class="col-lg-12 d-flex flex-column justify-content-top text-center" >
             <form>
-              <div class="row mt-2">
-                <div class="col-2 form-group">
-                  <label for="yearInput">Year</label>
-                  <select class="form-control text-center" id="yearInput" size="1">
-                  </select>
+                
+                <div class="row mt-4 mb-2" style="margin-left: 0px;">
+                    <div class="col-3 title ml-4">Date of birth</div>
                 </div>
-                <div class="col-2 form-group">
-                  <label for="monthInput">Month</label>
-                  <select class="form-control text-center" id="monthInput" size="1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                  </select>
+                
+              <div class="row mt-0">
+                    <div class="col-1 form-group">
+                        <label for="yearInput">Year</label>
+                        <select class="form-control text-center" id="yearInput" size="1">
+                        </select>
+                    </div>
+                    <div class="col-1 form-group">
+                        <label for="monthInput">Month</label>
+                        <select class="form-control text-center" id="monthInput" size="1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="col-1 form-group">
+                        <label for="dayInput">Day</label>
+                        <select class="form-control text-center" id="dayInput" size="1">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                        </select>
+                    </div>
+                
+                <div class="col-1 form-group">
+                    <label for="sexInput">Sex</label>
+                    <select class="form-control text-center" id="sexInput" size="1">
+                      <option value="female">Female</option>
+                      <option value="male">Male</option>
+                    </select>
                 </div>
-                <div class="col-4">
-                  <button type="button" class="btn mt-4" onclick=showStat()>Get assumptions</button>
+                
+                <div class="col-2 form-group">
+                    <label for="countryInput">Country</label>
+                    <select class="form-control text-center" id="countryInput" size="1">
+                      <option value="ca">Canada</option>
+                      <option value="us">United States</option>
+                    </select>
+                </div>
+
+                <div class="col-2">
+                  <button type="button" class="btn mt-4" onclick=showStat()>Calculate</button>
                 </div>
               </form>
             </div>
@@ -127,11 +183,10 @@
       </div>
           
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-2">
+          </div>
+          <div class="col-lg-4">
             <div class="row">
-              <div class="col-6">
-                <h5>Economic assumptions</h5>
-              </div>
               <div class="col-6">
                 <h5 id="jsPeriod" style="text-align:center;font-weight: 700;"></h5>
               </div>
@@ -139,50 +194,62 @@
             <table class="table">
               <thead>
                 <th></th>
-                <th>Select rate</th>
-                <th>Ultimate rate</th>
+                <th>
+                  Results
+                </th>
               </thead>
               <tbody>
                 <tr>
-                    <th colspan="3">Interest (annual)</th>
+                  <th>Country</th>
+                  <td id="jsCountry"></td>
                 </tr>
                 <tr>
-                  <td style="text-align: right;">Non indexed annuity:</td>
-                  <td id="jsInterest1Select"></td>
-                  <td id="jsInterest1Ultimate"></td>
-                </tr>
-                  <td style="text-align: right;">Fully indexed annuity:</td>
-                  <td id="jsInterest2Select"></td>
-                  <td id="jsInterest2Ultimate"></td>
+                  <th>Sex</th>
+                  <td id="jsSex"></td>
                 </tr>
                 <tr>
-                    <th>Inflation (annual)</th>
-                    <td id="jsInflationSelect"></td>
-                    <td id="jsInflationUltimate"></td>
+                  <th>Date of birth</th>
+                  <td id="jsDtBirth"></td>
                 </tr>
                 <tr>
-                  <th>Duration</th>
-                  <td><span id="jsSelect"></span> years</td>
-                  <td>thereafter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="col-4">
-            <h5>Demographic assumptions</h5>
-            <table class="table">
-              <thead style="font-size: 0;">
-                <th>.</th>
-                <th>.</th>
-              </thead>
-              <tbody>
-                <tr>
-                    <th>Mortality table</th>
-                    <td id="jsQxTable"></td>
+                  <th>Date of calculation</th>
+                  <td id="jsDtCalc"></td>
                 </tr>
                 <tr>
-                    <th>Projection scale</th>
-                    <td id="jsQxScale"></td>
+                  <th>Age</th>
+                  <td id="jsAge"></td>
+                </tr>
+                <tr>
+                  <th>Life expectancy</th>
+                  <td id="jsLifeExp"></td>
+                </tr>
+                <tr>
+                  <th>Survival probability:</th>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right;">5 years</td>
+                  <td id="jsSurv5"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right;">10 years</td>
+                  <td id="jsSurv10"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right;">15 years</td>
+                  <td id="jsSurv15"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right;">20 years</td>
+                  <td id="jsSurv20"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right;">25 years</td>
+                  <td id="jsSurv25"></td>
+                </tr>
+                <tr>
+                  <td style="text-align: right;">30 years</td>
+                  <td id="jsSurv30"></td>
                 </tr>
               </tbody>
             </table>
@@ -190,7 +257,7 @@
         </div>
       </div>
 
-    </section><!-- End STAT-CIA Section -->
+    </section><!-- End STAT-LIFE Section -->
 
   </main><!-- End #main -->
 
@@ -246,6 +313,6 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/api-utils.js"></script>
-  <script src="assets/js/api-cia.js"></script>
+  <script src="assets/js/api-life.js"></script>
 </body>
 </html>
