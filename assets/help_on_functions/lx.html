@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>LX, LX_aea</title>
+  <title>LX</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -20,6 +20,10 @@
 
   <!-- Template Main CSS File -->
   <link href="../css/style.css" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 
 </head>
 
@@ -27,16 +31,30 @@
     <section id="help" class="help">
         <div class="container">
             <div class="row">
-                <div class="col"><h1>LX or LX_aea function</h1></div>
+                <div class="col"><h1>LX<sup>*</sup> function</h1></div>
                 <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
             </div>
 
             <a href="../../#tutorials" target="_blank">See the tutorial on Youtube</a>
 
-            <p class="mb-2">The <span class="highlight">LX or LX_aea<sup>*</sup> function</span> returns a vector of L<sub>x</sub> from age or x = 0 to 120 (years), where L<sub>x</sub> = L<sub>x-1</sub> x p<sub>x-1</sub> = L<sub>x-1</sub> x (1 - q<sub>x-1</sub>).</p>
-            <p class="function-definition mt-0">The <span class="highlight">LX or LX_aea function</span> is never used alone, it is always a parameter of one of the following functions: 
+            <p class="mb-2">The <span class="highlight">LX<sup>*</sup> function</span>, from the actuarial notation \(l_x\), returns a vector of 122 elements, from age \(x=0\) to age \(x=121\).  Each element represents the number of lives surviving at age \(x\) from an initial cohort of lives at age = 0.</p>
+           
+            <div class="row">
+                <div class="col-3">
+                    \[l_x =
+                    \begin{cases}
+                      1,000,000, & \text{for }  x = 0 \\
+                      l_{x-1}\;p_{x-1}=l_{x-1}\;(1 - q_{x-1}), & \text{for } 0 < x \leq 121 \\
+                    \end{cases}\]
+                </div>
+            </div>
+
+            <p class="function-definition mt-0">The parameters of the <span class="highlight">LX<sup>*</sup> function</span> determined which mortality table is used and what adjustments and projection, if any, must be made to the mortality rates (\(q_x\)).</p>
+
+            <p class="function-definition mt-0">The <span class="highlight">LX<sup>*</sup> function</span> is never used alone, it is always a parameter of one of the following functions: 
                 <a href="js.html" target="_blank">JS</a>, <a href="jl.html" target="_blank">JL</a>, <a href="lifeins.html" target="_blank">LifeIns</a>, 
-                <a href="tpx.html" target="_blank">TPX</a>, <a href="tqx.html" target="_blank">TQX</a>, <a href="getlx.html" target="_blank">GetLx</a>, <a href="certain.html" target="_blank">CERTAIN</a>.</p>
+                <a href="tpx.html" target="_blank">TPX</a>, <a href="tqx.html" target="_blank">TQX</a>, <a href="getlx.html" target="_blank">GetLx</a>, <a href="lifeexpectancy.html" target="_blank">LifeExpectancy</a>, <a href="certain.html" target="_blank">CERTAIN</a>.</p>
+
 
             <p class="help-required mb-0">* : Starting with version 4.5.3, LX can be called using LX or LX_aea.</p>
             <p class="help-required">** : Required parameter</p>
@@ -50,7 +68,11 @@
                 <div class="row">
                     <div class="col-2 help-param-required">Sex<sup>**</sup></div>
                     <div class="col-1">--</div>
-                    <div class="col-9">1: Male q<sub>x</sub>, 2: Female q<sub>x</sub>, 1.75: 75% Female+ 25% Male, etc.</div>
+                    <div class="col-9">
+                        <div class="col-4">
+                            \[\text{Sex} =\begin{cases}1&q_x^{Male}\\ \cdots&\cdots\\1.75\;&0.25\;q_x^{Male}+0.75\;q_x^{Female}\\ \cdots&\cdots\\2&q_x^{Female}\end{cases}\]
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-2">Qx table</div>
@@ -60,12 +82,12 @@
                 <div class="row">
                     <div class="col-2">Age move</div>
                     <div class="col-1">0</div>
-                    <div class="col-9">Age shift for the mortality table (+ means older, - means younger)</div>
+                    <div class="col-9">\(q_x^{age\;move} = q_{x+age\;move}\), with the necessary adjustments at beginning and end of mortality table</div>
                 </div>
                 <div class="row">
                     <div class="col-2">Load</div>
                     <div class="col-1">0</div>
-                    <div class="col-9">Loading (q<sub>x-loaded</sub> = q<sub>x</sub> x (1 + load))</div>
+                    <div class="col-9">\(q_x^{load} = q_x\; (1 + load)\), respecting \(0\le q_x^{load}\le 1\)</div>
                 </div>
                 <div class="row">
                     <div class="col-2">Projection</div>

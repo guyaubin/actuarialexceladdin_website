@@ -1456,6 +1456,15 @@ section.help {
   color: var(--BGColor);
 }
 
+.help a.formula {
+  font-size: 24px;
+  color: blue;
+}
+
+.help a.formula:hover {
+  color: var(--BGColor);
+}
+
 .help p.function-definition a,
 .help div.function-definition a {
   font-size: inherit;

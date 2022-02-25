@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>GetLx</title>
+  <title>LifeExpectancy</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
@@ -30,14 +30,24 @@
 <body>
     <section id="help" class="help">
         <div class="container">
-            <div class="row">
-                <div class="col"><h1>GetLx function</h1></div>
+            <div class="row mb-0">
+                <div class="col"><h1>LifeExpectancy function</h1></div>
                 <div class="col text-end"><h3>Actuarial Excel Addin</h3></div>
             </div>
+            
+            <img src="../img/coming-soon.png" alt="">
 
-            <p class="mb-2 mt-5">The <span class="highlight">GetLx function</span> returns the number of lives surviving at age \(x\), from the actuarial notation <a class="formula" href="lx.html" target="_blank">\(l_x\)</a>.</p>
+            <p class="mt-2">The <span class="highlight">LifeExpectancy function</span>, from the actuarial notation \(e_x\), calculates the remaining years of life expectancy at Age equals \(x\), where:</p>
 
-            <p class="help-required">* : Required parameter</p>
+            <div class="row">
+                <div class="col-3">
+                    \[e_{x}={\sum_ {t=0}^{\infty}\;t\;_{t}p_x\;q_{x+t}}\; + \frac{1}{2}\]
+                </div>
+            </div>
+
+            <p class="see-also mt-4">See also: <a href="tpx.html" target="_blank">TPX</a>, <a href="tqx.html" target="_blank">TQX</a></p>
+
+            <p class="help-required mt-4">* : Required parameter</p>
 
             <div class="help-table function-definition">
                 <div class="row help-table-title">
@@ -48,7 +58,7 @@
                 <div class="row">
                     <div class="col-2 help-param-required">Age *</div>
                     <div class="col-1">--</div>
-                    <div class="col-9">....., <span class="note">fraction allowed (linear interpolation of \(l_x\) between the two nearest rounded ages)</span></div>
+                    <div class="col-9">....., <span class="note">fraction allowed (interpolation between two nearest rounded ages)</span></div>
                 </div>
                 <div class="row">
                     <div class="col-2 help-param-required">Lx *</div>
@@ -56,6 +66,7 @@
                     <div class="col-9"><a href="lx.html" target="_blank">LX or LX_aea function</a>: mortality</div>
                 </div>
             </div>
+
         </div>
     </section>
 </body>
