@@ -57,6 +57,18 @@ const processJSON = json => {
     } else {
         lifeExp_suffix = " year"
     }
+
+    if (json.found == false) {
+        yearInput.style.color = "red";
+        monthInput.style.color = "red";
+        dayInput.style.color = "red";
+        dtBirth.style.color = "red";
+        yearInput.style.fontWeight = "bold";
+        monthInput.style.fontWeight = "bold";
+        dayInput.style.fontWeight = "bold";
+        dtBirth.style.fontWeight = "bold";
+    }
+
     sex.innerHTML = format_sex(json.sex);
     country.innerHTML = format_country(json.country);
     dtBirth.innerHTML = cleanInnerHTML(json, 'dtBirth', is_number=false);
