@@ -35,9 +35,9 @@ for (var year = yearToday; year >= yearMin; year--) {
     yearInput.appendChild(newOption);
     }
 
-yearInput.value = (yearToday - 50).toString();
-monthInput.value = (6).toString();
-dayInput.value = (15).toString();
+yearInput.value = yearToday.toString();
+monthInput.value = monthToday.toString();
+dayInput.value = dayToday.toString();
 
 function getPeriod(json) {
     return getMonth(json.month) + ' ' + json.year;
