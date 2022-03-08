@@ -1634,3 +1634,22 @@ section.help {
 .statistics .error-message {
   background-color: var(--red);
 }
+
+.statistics input[type="number"] {
+  text-align: right;
+}
+
+.statistics input[type="checkbox"] {
+  height:25px;
+  width:25px;
+  border: 2px solid #000;
+  text-align: center;
+}
+
+.statistics td, .statistics th {
+  vertical-align: middle;
+}
+
+.statistics .table-performance tr {
+  height: 2.5em;
+}

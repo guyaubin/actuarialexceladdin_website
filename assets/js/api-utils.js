@@ -1,5 +1,34 @@
 "use strict"; // enforce the declaration of variables
 
+function validate_input(input, default_value = 0) {
+    var num = Number(input.value);
+    if (isNaN(num)) {
+        return default_value;
+    } else {
+        return num;
+    }
+}
+
+function mark_input(input, valid, color ="black", fontWeight ="normal") {
+    if (valid) {
+        input.style.color = color;
+        input.style.fontWeight = fontWeight;
+    } else {
+        input.style.color = "red";
+        input.style.fontWeight = "bold";
+    }
+}
+
+
+function getElement(id, default_value = 0) {
+    var element = document.getElementById(id);
+    if (element == "") {
+        return default_value;
+    } else {
+        return element;
+    }
+}
+
 function getMonth(m) {
     var month;
     switch (m) {
@@ -42,6 +71,43 @@ function getMonth(m) {
     }
 
     return month;
+}
+
+
+function percentInnerHTML(value, precision = 2, empty ="---") {
+    if (value === null) {
+        return empty;
+    }
+    var num = Number(value);
+    if (isNaN(num)) {
+        return empty;
+    }
+    else {
+        num = num.toLocaleString('en-US', {
+            minimumFractionDigits: precision,
+            maximumFractionDigits: precision,
+            style: "percent"
+        });
+        return num;
+    }
+}
+
+
+function numberInnerHTML(value, precision = 2, empty ="---") {
+    if (value === null) {
+        return empty;
+    }
+    var num = Number(value);
+    if (isNaN(num)) {
+        return empty;
+    }
+    else {
+        num = num.toLocaleString('en-US', {
+            minimumFractionDigits: precision,
+            maximumFractionDigits: precision
+        });
+        return num;
+    }
 }
 
 function cleanInnerHTML(json, key, is_number = false, precision = 2, style = "percent") {

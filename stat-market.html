@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Actuarial Excel Addin</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="assets/img/logo-excel-addin.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> <!-- required by remember template for FAQ-->
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/colors.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.4.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body onload="showStat()">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-excel-addin.png" alt="">
+        <span>Actuarial Excel Addin</span>
+      </a>
+
+      <nav id="navbar" class="navbar mb-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#free-trial">Download</a></li>
+          <li><a class="nav-link scrollto" href="index.html#workbooks">Workbooks</a></li>
+          <li><a class="nav-link scrollto" href="index.html#tutorials">Tutorials</a></li>
+          <li class="dropdown"><a class="active" href="#"><span>Statistics</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="stat-life.html">Life expectancy</a></li>
+              <li><a href="#">Benchmark Assets Portfolio</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a href="stat-cia.html">Pension Commuted Values Assumptions</a></li>
+              <li><a href="stat-tax.html">Income Tax Limits - Pension</a></li>
+              <li><a href="stat-oas.html">Old Age Security</a></li>
+              <li><a href="stat-cpp.html">Canada Pension Plan</a></li>
+              <li><a href="stat-qpp.html">Québec Pension Plan</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a href="stat-cpi.html">Inflation</a></li>
+              <li><a href="stat-awe.html">Average Weekly Earnings</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="index.html#faq">F.A.Q</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+          <li><img src="assets/img/ukraine-flag.jpg" style="width: 40px; height:auto;padding-left: 10px;" alt=""></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar --> 
+    </div>
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <h5 class="smarter" style="margin-left: 45px;"><i>Work smarter. Act faster.  See further.</i></h5>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <!-- ======= STAT-MARKET Section ======= -->
+    <section id="stat-market" class="statistics">
+
+      <div class="container-fluid container-xl" style="margin-top: 50px;">
+        <div class="title">
+          <h4>Benchmark Assets Portfolio</h4>
+          <p class="mb-4">Calculate the performances of a benchmark assets portfolio at a selected month-end date.</p>
+            <p>With the <strong>Actuarial Excel Addin</strong>, access the month-end <a href="assets/help_on_functions/marketquote.html" target="_blank">market indices</a> of the most common pension assets categories.</p>
+        </div>
+        <div class="row gx-0">
+          <div class="col-lg-12 d-flex flex-column justify-content-top text-center" >
+            <form>
+                
+              <div class="row mt-4">
+                <div class="col-1 form-group">
+                  <label for="yearInput">Year</label>
+                  <select class="form-control text-center" id="yearInput" size="1">
+                  </select>
+                </div>
+                <div class="col-1 form-group">
+                  <label for="monthInput">Month</label>
+                  <select class="form-control text-center" id="monthInput" size="1">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                  </select>
+                </div>
+
+                <div class="col-2">
+                  <button type="button" class="btn mt-4" onclick=showStat()>Calculate</button>
+                </div>
+
+                <div class="col-8" style="text-align: left; margin-top: 30px;">
+                  <p id="js-error-message"></p>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                  <table class="table table-warning table-striped">
+                    <thead>
+                      <tr>
+                        <th style="border-bottom: 0; text-align: right;">Money market (FTSE Russel Canada)</th>
+                        <th class="text-center">Weight</th>
+                        <th class="text-center">Hedging</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align: right;">T-bills (91-day)</td>
+                        <td><input type="number" value="0" min="0" max="100" maxlength="3" id="w_tb91Input" required> %</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">Bonds Universe</td>
+                        <td><input type="number" value="0" min="0" max="100" maxlength="3" id="w_buInput"> %</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">Bonds Long</td>
+                        <td><input type="number" value="0" min="0" max="100" maxlength="3" id="w_blInput"> %</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th style="text-align: right;">Stock market</th>
+                        <td colspan="2"></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">Canada (S&P TSX)</td>
+                        <td><input type="number" value="0" min="0" max="100" maxlength="3" id="w_caInput"> %</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">U.S. (S&P 500)</td>
+                        <td><input type="number" value="0" min="0" max="100" maxlength="3" id="w_usInput"> %</td>
+                        <td class="text-center"><input type="number" value="0" min="0" max="100" maxlength="3" data-bs-toggle="tooltip" title="% invested in U.S. currency (i.e. hedged)" id="local_usInput"> %</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right;">World (MSCI)</td>
+                        <td><input type="number" value="0" min="0" max="100" maxlength="3" id="w_worldInput"> %</td>
+                        <td class="text-center"><input type="number" value="0" min="0" max="100" maxlength="3" data-bs-toggle="tooltip" title="% invested in local currencies (i.e. hedged)" id="local_worldInput"> %</td>
+                      </tr>
+                      <tr id="js-total-line">
+                        <td style="text-align: right; font-weight: bold;">Total</td>
+                        <td><span id="js-total-weights" style="padding-right: 10px;"></span> %</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div id="js-results" class="col-md-5" style="background-color: rgba(255,167,15,0.5);">
+                  <h4 class="pt-2" style=" text-align: left;">Performances for periods ending on:</h4>
+                  <h4 style="text-align: left;"><span id="jsDate"></span></h4>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <table class="table table-warning table-striped table-performance">
+                        <thead>
+                          <tr>
+                            <th colspan="2"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Year to date</td>
+                            <td id="jsytd_total"></td>
+                          </tr>
+                          <tr>
+                            <td>1 month</th>
+                            <td id="jsp1_total"></td>
+                          </tr>
+                          <tr>
+                            <td>3 months</td>
+                            <td id="jsp3_total"></td>
+                          </tr>
+                          <tr>
+                            <td>6 months</td>
+                            <td id="jsp6_total"></td></td>
+                          </tr>
+                          <tr>
+                            <td>9 months</td>
+                            <td id="jsp9_total"></td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <table class="table table-warning table-striped table-performance">
+                        <thead>
+                          <tr>
+                            <th colspan="2" style="text-align: right;">Annualized</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1 year</td>
+                            <td id="jsp12_total"></td>
+                          </tr>
+                          <tr>
+                            <td>2 years</td>
+                            <td id="jsp24_total"></td>
+                          </tr>
+                          <tr>
+                            <td>3 years</td>
+                            <td id="jsp36_total"></td>
+                          </tr>
+                          <tr>
+                            <td>4 years</td>
+                            <td id="jsp48_total"></td>
+                          </tr>
+                          <tr>
+                            <td>5 years</td>
+                            <td id="jsp60_total"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End STAT-MARKET Section -->
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8 col-md-12">       
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-contact text-md-end">
+            <h4>Contact Us</h4>
+            <p>
+              Montréal, Québec, Canada<br>
+              +1 514 952 2917<br>
+              <a href="mailto:admin@actuarialexceladdin.com?subject=Actuarial Excel Addin - Enquiry&cc=guyaubin07@gmail.com">admin@actuarialexceladdin.com</a><br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Aubin Consulting Actuary</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/api-utils.js"></script>
+  <script src="assets/js/api-market.js"></script>
+  <script>
+    $(function () {
+      $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
+</html>
