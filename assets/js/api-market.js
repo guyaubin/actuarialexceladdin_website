@@ -30,6 +30,8 @@ const errorMessage = getElement('js-error-message');
 const totalWeights = getElement('js-total-weights');
 const totalLine = getElement('js-total-line');
 const results = getElement('js-results');
+const div_messages = getElement('js-div-messages');
+const table_messages = getElement('js-table-messages');
 
 const today = new Date();
 const yearToday = today.getFullYear();
@@ -60,7 +62,8 @@ monthInput.value = monthMax.toString();
 const getResponse = response => response.json();
 const processJSON = json => {
     console.log(json);
-    var is_number, precision, style;
+    add_lines_to_table(div_messages, table_messages, json.messages);
+    var precision;
 
     if (json.found == false) {
         yearInput.style.color = "red";

@@ -1,6 +1,9 @@
 "use strict"; // enforce the declaration of variables
 
 function validate_input(input, default_value = 0) {
+    if (input.value.length == 0) {
+        input.value = default_value;
+    }
     var num = Number(input.value);
     if (isNaN(num)) {
         return default_value;
@@ -152,5 +155,22 @@ function format_country(country) {
         return 'United States'
     } else {
         return 'Canada'
+    }
+}
+
+function add_lines_to_table(div, table, lines){
+    var ctr = 0;
+    table.innerHTML = "";
+    if (lines.length === 0) {
+        div.style.display = "none";
+    } else {
+        lines.forEach(line => {
+            var row = table.insertRow(ctr);
+            var cell = row.insertCell(0);
+            cell.innerHTML = line;
+            cell.classList.add("text-danger")
+            ctr++;
+        });
+        div.style.display = "block";
     }
 }
