@@ -78,11 +78,6 @@ const processJSON = json => {
     }
 
     mark_input(totalLine, json.valid_weights, "green", "bold");
-    if (!json.valid_weights) {
-        results.style.color = "red";
-    } else {
-        results.style.color = "black";
-    }
 
     ytd_total.innerHTML = percentInnerHTML(json.ytd.total, precision=1);
     p1_total.innerHTML = percentInnerHTML(json.p1.total, precision=1);
