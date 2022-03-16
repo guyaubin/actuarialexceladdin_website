@@ -13,6 +13,7 @@ const inflationSelect = document.getElementById('jsInflationSelect');
 const inflationUltimate = document.getElementById('jsInflationUltimate');
 const select = document.getElementById('jsSelect');
 const period = document.getElementById('jsPeriod');
+const textRounding = document.getElementById('jsTextRounding');
 const today = new Date();
 const yearToday = today.getFullYear();
 const monthToday = today.getMonth() + 1; //January is 0!
@@ -46,6 +47,7 @@ function getPeriod(json) {
 
 const getResponse = response => response.json();
 const processJSON = json => {
+    console.log(json);
     qxTable.innerHTML = cleanInnerHTML(json, 'qxTable');
     qxScale.innerHTML = cleanInnerHTML(json, 'qxScale');
     interest1Select.innerHTML = cleanInnerHTML(json, 'rateselect', is_number=true, precision=2, style="percent");
@@ -56,6 +58,17 @@ const processJSON = json => {
     inflationUltimate.innerHTML = cleanInnerHTML(json, 'inflationultimate', is_number=true, precision=4, style="percent");
     select.innerHTML = cleanInnerHTML(json, 'select');
     period.innerHTML = getPeriod(json);
+    if (json.rateselectraw) {
+        var rate1 = cleanInnerHTML(json, 'rateselectraw', is_number=true, precision=4, style="percent");
+        var rate2 = cleanInnerHTML(json, 'rateultimateraw', is_number=true, precision=4, style="percent");
+        var text = '*: The rates of pension escalation must be rounded as per Section 3540.13.  ';
+        text = text + 'The select and ultimate unrounded interest rates for non indexed pensions are ';
+        text = text + rate1 + ' and ' + rate2 + ', respectively.';
+        textRounding.innerHTML = text;
+    } else {
+        textRounding.innerHTML = "";
+    }
+
 }
 
 function showStat() {
