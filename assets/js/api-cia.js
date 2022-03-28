@@ -47,13 +47,22 @@ function getPeriod(json) {
 
 const getResponse = response => response.json();
 const processJSON = json => {
-    console.log(json);
+    var precision;
+    if (json.year > 2009) {
+        precision = 1;
+    } else if (json.year < 2009) {
+        precision = 2;
+    } else if (json.month > 3) {
+    precision = 1;
+    } else {
+        precision = 2;
+    }
     qxTable.innerHTML = cleanInnerHTML(json, 'qxTable');
     qxScale.innerHTML = cleanInnerHTML(json, 'qxScale');
-    interest1Select.innerHTML = cleanInnerHTML(json, 'rateselect', is_number=true, precision=2, style="percent");
-    interest1Ultimate.innerHTML = cleanInnerHTML(json, 'rateultimate', is_number=true, precision=2, style="percent");
-    interest2Select.innerHTML = cleanInnerHTML(json, 'rateiselect', is_number=true, precision=2, style="percent");
-    interest2Ultimate.innerHTML = cleanInnerHTML(json, 'rateiultimate', is_number=true, precision=2, style="percent");
+    interest1Select.innerHTML = cleanInnerHTML(json, 'rateselect', is_number=true, precision=precision, style="percent");
+    interest1Ultimate.innerHTML = cleanInnerHTML(json, 'rateultimate', is_number=true, precision=precision, style="percent");
+    interest2Select.innerHTML = cleanInnerHTML(json, 'rateiselect', is_number=true, precision=precision, style="percent");
+    interest2Ultimate.innerHTML = cleanInnerHTML(json, 'rateiultimate', is_number=true, precision=precision, style="percent");
     inflationSelect.innerHTML = cleanInnerHTML(json, 'inflationselect', is_number=true, precision=4, style="percent");
     inflationUltimate.innerHTML = cleanInnerHTML(json, 'inflationultimate', is_number=true, precision=4, style="percent");
     select.innerHTML = cleanInnerHTML(json, 'select');
