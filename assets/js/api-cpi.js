@@ -5,8 +5,10 @@ const rate_1 = document.getElementById('jsRate_1');
 const rate_ytd = document.getElementById('jsRate_ytd');
 const rate_12 = document.getElementById('jsRate_12');
 const period = document.getElementById('jsPeriod');
+const province = document.getElementById('jsProvince');
 const yearInput = document.getElementById('yearInput');
 const monthInput = document.getElementById('monthInput');
+const provinceInput = document.getElementById('provinceInput');
 const today = new Date();
 const yearToday = today.getFullYear();
 const monthToday = today.getMonth() + 1; //January is 0!
@@ -40,6 +42,10 @@ function getPeriod(json) {
     return getMonth(json.month) + ' ' + json.year;
 }
 
+// function getProvince(json) {
+//     return 'Inflation in ' + findProvince(json.province);
+// }
+
 
 const getResponse = response => response.json();
 const processJSON = json => {
@@ -47,16 +53,24 @@ const processJSON = json => {
     rate_ytd.innerHTML = cleanInnerHTML(json, 'rate_ytd', is_number=true, precision=1, style="percent");
     rate_12.innerHTML = cleanInnerHTML(json, 'rate_12', is_number=true, precision=1, style="percent");
     period.innerHTML = getPeriod(json);
+    province.innerHTML = getProvince(json.province);
     yearInput.value = json.year;
     monthInput.value = json.month;
+    provinceInput = json.province;
 }
 
 function showStat() {
     yyyy = yearInput.value;
     mm = monthInput.value;
+    prov = provinceInput.value;
+    if ((prov != 'CA') && (yyyy < 1980)) {
+        yyyy = 1980;
+    }
+
     let url = new URL(url_api_root + 'cpi');
     url.searchParams.set('year', yyyy);
     url.searchParams.set('month', mm);
+    url.searchParams.set('province', prov);
     fetch(url)
         .then(getResponse)
         .then(processJSON);

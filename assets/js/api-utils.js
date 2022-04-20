@@ -77,6 +77,48 @@ function getMonth(m) {
 }
 
 
+function getProvince(p) {
+    var province;
+    switch (p) {
+    case "CA":
+        province = "Canada";
+        break;
+    case "AL":
+        province = "Alberta";
+        break;
+    case "CB":
+        province = "British Columbia";
+        break;
+    case "MA":
+        province = "Manitoba";
+        break;
+    case "NB":
+        province = "New Brunswick";
+        break;
+    case "TN":
+        province = "Newfoundland and Labrador";
+        break;
+    case "NE":
+        province = "Nova Scotia";
+        break;
+    case "ON":
+        province = "Ontario";
+        break;
+    case "IPE":
+        province = "Prince Edward Island";
+        break;
+    case "QC":
+        province = "Québec";
+        break;
+    case "SA":
+        province = "Saskatchewan";
+        break;
+    }
+
+    return province;
+}
+
+
 function percentInnerHTML(value, precision = 2, empty ="---") {
     if (value === null) {
         return empty;
