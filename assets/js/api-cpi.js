@@ -42,10 +42,6 @@ function getPeriod(json) {
     return getMonth(json.month) + ' ' + json.year;
 }
 
-// function getProvince(json) {
-//     return 'Inflation in ' + findProvince(json.province);
-// }
-
 
 const getResponse = response => response.json();
 const processJSON = json => {

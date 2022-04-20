@@ -89,7 +89,7 @@
       <div class="container-fluid container-xl" style="margin-top: 50px;">
         <div class="title">
           <h4>Average weekly earnings in Canada</h4>
-          <p class="mb-4">Shows the variation of the <i>Average weekly earnings (including overtime) for all employees - Seasonally adjusted</i> based on data compiled by <a href="https://www150.statcan.gc.ca/n1/dai-quo/ind1-eng.htm" target="_blank">Statistics Canada</a>.</p>
+          <p class="mb-4">Shows the variation of the <i>Average weekly earnings (including overtime) for all employees - Seasonally adjusted</i> in Canada (since 1984) and its provinces (since 1992) based on data compiled by <a href="https://www150.statcan.gc.ca/n1/dai-quo/ind1-eng.htm" target="_blank">Statistics Canada</a>.</p>
 
           <p>The <strong>Actuarial Excel Addin</strong> returns these statistics and <a class="btn-download" href="assets/img/video/stats-cheat-sheet.pdf" download="cia-cheat-sheet.pdf">many more</a> ready to be incorporated into your calculations.</p>
         </div>
@@ -119,6 +119,22 @@
                     <option>12</option>
                   </select>
                 </div>
+                <div class="col-4 form-group">
+                  <label for="provinceInput">Province</label>
+                  <select class="form-control text-center" id="provinceInput" size="1">
+                    <option value="CA">Canada</option>
+                    <option value="AL">Alberta</option>
+                    <option value="CB">British Columbia</option>
+                    <option value="MA">Manitoba</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="TN">Newfoundland and Labrador</option>
+                    <option value="NE">Nova Scotia</option>
+                    <option value="ON">Ontario</option>
+                    <option value="IPE">Prince Edward Island</option>
+                    <option value="QC">Québec</option>
+                    <option value="SA">Saskatchewan</option>
+                  </select>
+                </div>
                 <div class="col-4">
                   <button type="button" class="btn mt-4" onclick=showStat()>Get statistics</button>
                 </div>
@@ -131,7 +147,7 @@
             <table class="table">
               <tbody>
                   <thead>
-                      <th>Average Weekly Earnings</th>
+                    <th id="jsProvince"></th>
                       <th id="jsPeriod"></th>
                   </thead>
                 <tr>
