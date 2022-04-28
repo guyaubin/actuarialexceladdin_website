@@ -31,10 +31,11 @@
 
             <!-- <a href="../../#tutorials" target="_blank">See the tutorial on Youtube</a> -->
 
-            <p class="mb-0 mt-4">The <span class="highlight">JL function</span> returns the value at Age1/Age2 of a joint and life annuity ceasing on the first death of $1 of pension per year starting in <span class="">Deferred</span> years, discounted with interest and mortality and payable:</p>
+            <p class="mb-0 mt-4">The <span class="highlight">JL function</span> returns the value at Age1/Age2 of a joint and life annuity ceasing (or reducing ...) on the first death of $1 of pension per year starting in <span class="">Deferred</span> years, discounted with interest and mortality and payable:</p>
             <ul>
-                <li>during the annuitant's and co-annuitant's shortest lifetime OR ceasing after a number of years,</li>
-                <li>with ou without a guaranteed period, and</li>
+                <li>during the annuitant's and co-annuitant's joint lifetime and ceasing (or reducing) on first death,</li>
+                <li>ceasing after a number of years (when 'Years paid' parameter is used),</li>
+                <li>with ou without a guaranteed period (100% paid during guaranteed period), and</li>
                 <li>with or without indexation.</li>
             </ul>
 
@@ -123,6 +124,11 @@
                     <div class="col-3">Qx-pre 2</div>
                     <div class="col-1">True</div>
                     <div class="col-8">True: Mortality of <span class="highlight">co-annuitant</span> during deferment period</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Continuarion rate</div>
+                    <div class="col-1">0</div>
+                    <div class="col-8">Portion of pension continuing after first death (between 0 and 1).</div>
                 </div>
             </div>
 
