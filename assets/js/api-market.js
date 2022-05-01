@@ -55,8 +55,10 @@ for (var year = yearMax; year >= yearMin; year--) {
     yearInput.appendChild(newOption);
     }
 
-yearInput.value = yearMax.toString();
-monthInput.value = monthMax.toString();
+// yearInput.value = yearMax.toString();
+// monthInput.value = monthMax.toString();
+yearInput.value = "0";
+monthInput.value = "0";
 
 
 const getResponse = response => response.json();
@@ -75,6 +77,8 @@ const processJSON = json => {
         monthInput.style.color = "black";
         yearInput.style.fontWeight = "normal";
         monthInput.style.fontWeight = "normal";
+        yearInput.value = json.year;
+        monthInput.value = json.month;
     }
 
     mark_input(totalLine, json.valid_weights, "green", "bold");
