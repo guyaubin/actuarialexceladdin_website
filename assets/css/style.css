@@ -528,6 +528,26 @@ section {
   margin-top: 0;
 }
 
+.hero .btn-watch-video {
+  font-size: 22px;
+  transition: 0.5s;
+  margin-top: 35px;
+  margin-left: 0px;
+  color: var(--mainColor);
+}
+
+.hero .btn-watch-video i {
+  color: var(--mainColor);
+  font-size: 40px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero .btn-watch-video:hover {
+  color: var(--BGColor);
+}
+
 @media (min-width: 1024px) {
   .hero {
     background-attachment: fixed;
@@ -895,6 +915,7 @@ section {
 
 #btn-free-trial {
   background: var(--BGColor);
+  margin-top: 20px;
 }
 
 .free-trial {
