@@ -28,6 +28,8 @@
   --red: red;
   --blue: blue;
 
+  --xmasColor: #D6001C;
+
   --BGColor: #ffa70f;
   --BGColorDimmed: rgba(255, 167, 15, 0.35);
   --BGHelp: #e6eae1;
@@ -546,6 +548,18 @@ section {
 
 .hero .btn-watch-video:hover {
   color: var(--BGColor);
+}
+.hero a.email {
+  color: var(--white);
+  font-weight: 600;
+  background: var(--BGColor);
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+
+.hero a.email:hover {
+  color: var(--xmasColor);
+  font-weight: 700;
 }
 
 @media (min-width: 1024px) {
