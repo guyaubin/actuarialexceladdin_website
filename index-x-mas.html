@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="ahrefs-site-verification" content="62d76e6af0445bb1f9be02ca296362277bc779e865f0f4ed8c1a1de678632585">
+  <meta name="description" content="The Actuarial Excel Addin turns the Excel workbook into a workbench for actuaries and pension plans' administrators. 85+ mortality tables. 30-day free trial.">
+  <meta name="keywords" content="Excel, addin, add-in, actuarial functions, annuity factor, life expectancy, pension, mortality table">
 
-  <title>Actuarial Excel Addin</title>
-  <meta content="" name="description">
-
-  <meta content="" name="keywords">
+  <title>Actuarial Excel Addin, turns Excel workbook into actuaries' workbench</title>
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDR8EQG78W"></script>
@@ -38,6 +38,10 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.4.0
@@ -65,8 +69,24 @@
           <li><a class="nav-link scrollto" href="#free-trial">Download</a></li>
           <li><a class="nav-link scrollto" href="#workbooks">Workbooks</a></li>
           <li><a class="nav-link scrollto" href="#tutorials">Tutorials</a></li>
+          <li class="dropdown"><a href="">Statistics <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="stat-life.html">Life expectancy</a></li>
+              <li><a href="stat-market.html">Benchmark Assets Portfolio</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a href="stat-cia.html">Pension Commuted Values Assumptions</a></li>
+              <li><a href="stat-tax.html">Income Tax Limits - Pension</a></li>
+              <li><a href="stat-oas.html">Old Age Security</a></li>
+              <li><a href="stat-cpp.html">Canada Pension Plan</a></li>
+              <li><a href="stat-qpp.html">Québec Pension Plan</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a href="stat-cpi.html">Inflation</a></li>
+              <li><a href="stat-awe.html">Average Weekly Earnings</a></li>
+            </ul>
+          </li>
           <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><img src="assets/img/ukraine-flag.jpg" style="width: 40px; height:auto;padding-left: 10px;" alt=""></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -84,32 +104,69 @@
           <h2 data-aos="fade-up" data-aos-delay="400">Actuarial functionalities for Excel workbooks.</h2>
           <h2 data-aos="fade-up" data-aos-delay="800">Created by a Canadian pension actuary to perform actuarial valuations and administration tasks.</h2>
           <div data-aos="fade-up" data-aos-delay="1200">
-            <div class="text-center text-lg-start">
+            <div class="row" style="margin-top: 40px;">
+              <div class="col-lg-8" style="margin-top: 20px;">
+                <h1 style="color: var(--xmasColor);">Year-end offer !!!</h1>
+                <h2 style="margin-top: 2px;">Buy in 2022 and get 3 months free for your 2023 licenses.</h2>
+                <p style="color: #128045; font-style: italic; margin-bottom: 3px;">Offer available to new client and additional licenses bought by existing client.</p>
+                
+              <a  class="email" href="mailto:admin@actuarialexceladdin.com?subject=Actuarial Excel Addin - Year-end offer !!!&cc=guyaubin07@gmail.com">Contact us</a><br>
+              </div>
+              <div class="col-lg-4" style="margin-top: 60px;">
+                <div class="text-center text-lg-start">
+                  <a href="https://www.youtube.com/watch?v=1Xflv9MlsNE" target="_blank" class="btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                  <a id="btn-free-trial" href="#free-trial" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                    <span>Free trial</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="text-center text-lg-start">
               <a id="btn-free-trial" href="#free-trial" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Free trial</span>
+                <span>Free trial 2</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img-butterfly.png" class="img-fluid" alt="">
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200" style="text-align: center;">
+          <!-- <img src="assets/img/hero-img-butterfly.png" class="img-fluid" alt=""> -->
+          <img src="assets/img/x-mas.jpg" class="img-fluid" alt="">
 
           <!-- start of caroussel -->
           <div class="hero-testimony">
             <div id="carousel01" class="carousel carousel-dark slide" data-bs-ride="carousel">
 
               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel01" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel01" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
                 <button type="button" data-bs-target="#carousel01" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carousel01" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carousel01" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 <button type="button" data-bs-target="#carousel01" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 <button type="button" data-bs-target="#carousel01" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#carousel01" data-bs-slide-to="6" aria-label="Slide 7" class="active" aria-current="true" ></button>
+                <button type="button" data-bs-target="#carousel01" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carousel01" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carousel01" data-bs-slide-to="8" aria-label="Slide 9"></button>
               </div>
 
               <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <div class="d-block">
+                    <p>"<b>Software especializado en cálculo actuarial muy versátil y altamente pedagógico.</b>"</p>
+                      <p class="author">Evaristo Diz PhD,Fellow of the Spanish Institute of actuaries (Professor of Actuarial Mathematics)</p>
+                      <p class="company"><a href="https://www.amazon.ca/Evaristo-Diz/e/B09SM34PPG/ref=aufs_dp_fta_dsk" target="_blank">Teoría de riesgo (book)</a></p>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="d-block">
+                    <p>"<b>The add-in is fantastic.</b>"</p>
+                      <p class="author">Allison Thullner, FCIA, FSA, Director Actuarial Division</p>
+                      <p class="company"><a href="https://www.pbas.ca/" target="_blank">The PBAS Group</a></p>
+                  </div>
+                </div>
 
                 <div class="carousel-item">
                   <div class="d-block">
@@ -154,7 +211,7 @@
                     <p>"<b>Since 2005</b>, the addin allowed us to program with unparalleled flexibility, transparency and speed. It enables efficient verification and full understanding for users.
                       <b>A tool of excellence that continues to evolve.</b>"</p>
                     <p class="author">René Roy, FCIA, FSA, Vice President and Practice Leader - Pension Plans</p>
-                    <p class="company"><a href="http://trinomeconseils.com/en/" target="_blank">Trinome Conseils a division of Lussier Dale Parizeau</a></p>
+                    <p class="company"><a href="https://lussier.co/en/business/retirement-plans-and-asset-management" target="_blank">Lussier</a></p>
                   </div>
                 </div>
                 
@@ -167,7 +224,7 @@
                   </div>
                 </div>
                 
-                <div class="carousel-item active">
+                <div class="carousel-item">
                   <div class="d-block">
                     <p>"We use the Addin to <b>generate annuity factors</b> in Excel.  It is <b>easy to use</b> [...] to validate benefit calculations.  [...] is very 
                       responsive and is continually adding features that allow the Addin to be used for <b>more 
@@ -203,7 +260,7 @@
                   <p>With fully parameterized annuity 
                   factors and looping facility, it saves times and increases 
                   productivity.</p>
-              <h3>Work smarter. Act faster.  See further.</h3>
+              <h3 style="font-size: 90%;">Work smarter. Act faster.  See further.</h3>
               <ul>
                 <li>Use pre-built actuarial functions</li>
                 <li>Use the same workbook for all the benefits calculations of a pension plan</li>
@@ -237,11 +294,24 @@
               <ul class="mine">
                 <li>Add-in developed and maintained by an experienced pension actuary</li>
                 <li>Used since 2005 by actuaries and pension administrators</li>
-                <li>Actuarial functions: <code>ä<sub>x:y</sub>, l<sub>x</sub>, <sub>t</sub>p<sub>x</sub>, <sub>t</sub>q<sub>x</sub>, v<sup>t</sup>, Ä<sub>x</sub></code></li>
+                <li>Actuarial functions: \(\;l_x\quad _tp_x\quad _tq_x\quad\mathring e_x\quad v^t\quad \ddot A_x\)</li>
+                <li>Annuity factors: \(\;\ddot a_{\overline{x:y}}\;\)</li>
+                <ul>
+                  <li>immediate or deferred</li>
+                  <li>any frequency of payment, 1, 12, 24, 26, 52, ... (\(\ddot a_x^{(freq)})\)</li>
+                  <li>payment at beginning or end of period \((\ddot a_x\text{ or }a_x)\)</li>
+                  <li>single life or 2 lives \((\ddot a_x\text{ or }\ddot a_{x:y}\;\ddot a_{\overline{x:y}})\)</li>
+                  <li>single or multiple interest rates (vector approach)</li>
+                  <li>single or multiple indexation rates (vector approach)</li>
+                  <li>guaranteed period (5, 10, 15 years, ...)</li>
+                  <li>percentage reverting to co-annuitant (50%, 60%, ..., 100%)</li>
+                  <li>period of payment (lifetime or temporary)</li>
+                  <li>85<sup>+</sup> mortality tables and projection scales</li>
+                  <li>etc.</li>
+                </ul>
                 <li>More functions: Eligibility dates, Average earnings, …</li>
-                <li>Annuity factors <code>ä<sub>x:y</sub></code>: immediate or deferred, with or without a co-annuitant, single or multiple interest rates (vector approach), single or multiple indexation rates (vector approach), frequency of payment, guaranteed period, percentage reverting to co-annuitant, period of payment, projection of mortality, …</li>
                 <li>Loop on data, do calculation on a separate worksheet and save individual results or print the statements to a PDF file</li>
-                <li>More than 40 mortality tables including the CPM 2014 (Canada) and its mortality projection scales, Canada Census 2017-2019, U.S.A. Period Life Table 2017</li>
+                <li>85<sup>+</sup> mortality tables and projection scales including the <span style="white-space: nowrap;">CPM 2014 (Canada)</span> and its projection scales, <span style="white-space: nowrap;">Canada Census 2018-2020,</span> <span style="white-space: nowrap;">U.S.A. Period Life Table 2019</span></li>
                 <li>Mortality tables and projection scales updated regularly</li>
                 <li>Add your own mortality tables and projection scales</li>
                 <li>Canadian statistics for the pension industry updated monthly</li>
@@ -316,8 +386,8 @@
                     <h3>Download the installation file</h3>
                     <p class="fst-italic">Select an addin's version by clicking one of the following buttons:</p>
                     
-                      <a href="assets/versions/aea-v-4-5-5.msi?dl=1" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                        <span>Version 4.5.5 (latest)</span>
+                      <a href="assets/versions/aea-v-4-5-8.msi?dl=1" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                        <span>Version 4.5.8 (latest)</span>
                         <i class="bi bi-arrow-right"></i>
                       </a>
                     <br>
@@ -328,12 +398,15 @@
                           Previous versions
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-4.msi?dl=1">version 4.5.4</a></li>
-                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-3.msi?dl=1">version 4.5.3</a></li>
-                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-2.msi?dl=1">version 4.5.2</a></li>
-                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-1.msi?dl=1">version 4.5.1</a></li>
-                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-0.msi?dl=1">version 4.5.0</a></li>
-                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-4-5.msi?dl=1">version 4.4.5</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-7.msi?dl=1">4.5.7</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-6.msi?dl=1">4.5.6</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-5.msi?dl=1">4.5.5</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-4.msi?dl=1">4.5.4</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-3.msi?dl=1">4.5.3</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-2.msi?dl=1">4.5.2</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-1.msi?dl=1">4.5.1</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-5-0.msi?dl=1">4.5.0</a></li>
+                          <li><a class="dropdown-item text-center" href="assets/versions/aea-v-4-4-5.msi?dl=1">4.4.5</a></li>
                         </ul>
                       </div>
                       <!-- Default dropright button -->
@@ -347,7 +420,7 @@
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Install the Actuarial Excel Addin on your computer</h3>
                     <p class="instructions">Uninstall the 'old' version of the Actuarial Excel Addin, if applicable.</p>
-                    <p class="instructions">Install the 'new' version by double-clicking the file <span style="color: var(--BGColor); font-weight:600;">aea-v-4-5-5.msi</span> (or previous version) that you have just downloaded.</p>
+                    <p class="instructions">Install the 'new' version by double-clicking the file <span style="color: var(--BGColor); font-weight:600;">aea-v-4-5-8.msi</span> (or previous version) that you have just downloaded.</p>
                     <p class="instructions">Follow the instructions after launching the installation.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -431,19 +504,21 @@
               <p class="bullet">Easy assumptions entry</p>
               <p class="bullet">Canada, United States mortality tables</p>
               <p class="bullet">CIA, Section 3500 automated</p>
-              <a class="download" href="assets/workbooks/Annuity-Factors-Calculator-v.03.xlsx" download="Annuity-Factors-Calculator.xlsx"><span>Download workbook</span> <i class="bi bi-arrow-right"></i></a>
+              <a class="download" href="assets/workbooks/Annuity-Factors-Calculator-v.04.xlsx" download="Annuity-Factors-Calculator.xlsx"><span>Download workbook</span> <i class="bi bi-arrow-right"></i></a>
               <a class="download" href="https://youtu.be/okAuT2wt8P4" target="_blank"><span>Demo on Youtube</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="workbook-box green">
-              <h3 class="icon">Personal Data</h3>
-              <p class="bullet">Mortality tables</p>
-              <p class="bullet">Projection scales</p>
-              <p class="bullet">Yearly, Monthly and Daily statistics</p>
-              <a class="download" href="assets/workbooks/my_aea.xlsm" download="my_aea.xlsm"><span>Download workbook</span> <i class="bi bi-arrow-right"></i></a>
-              <a class="download" href="https://youtu.be/s86yPaNrP4o" target="_blank"><span>Demo on Youtube</span> <i class="bi bi-arrow-right"></i></a>
+              <!-- <i class="ri-discuss-line icon">Annuity Factors Calculator</i> -->
+              <h3 class="icon">Benchmark Portfolio</h3>
+              <p class="bullet">Select among: equities, bonds, cash</p>
+              <p class="bullet">Set the calculation date</p>
+              <p class="bullet">1, 3, 6, 9 months and YTD performances</p>
+              <p class="bullet">1, 2, 3, 4, 5 years performances</p>
+              <a class="download" href="assets/workbooks/Benchmark-portfolio-performances-v.02.xlsx" download="Benchmark-portfolio-performances.xlsx"><span>Download workbook</span> <i class="bi bi-arrow-right"></i></a>
+              <!-- <a class="download" href="https://youtu.be/okAuT2wt8P4" target="_blank"><span>Demo on Youtube</span> <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div>
 
@@ -678,17 +753,26 @@
         <div class="faq-list">
           <ul>
 
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-1" class="collapsed">What are the requirements to run the addin? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  You need a PC (not MAC compatible), Excel 2007 or newer and Windows XP, 7, 8, 8.1, 10 or 11.
+                </p>
+              </div>
+            </li>
+
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">How can I get a free trial? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How can I get a free trial? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>Install the addin and you will receive a valid key for a 30-day free trial. <a class="email" href="#download">Go to installation</a>
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is the cost of the Actuarial Excel Addin? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-3">What is the cost of the Actuarial Excel Addin? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
                   The Actuarial Excel Addin is sold as an annual licence valid for a single computer, renewable every January 1<sup>st</sup>.  
                   The cost of the license is indexed yearly with inflation (Canada). 
@@ -697,27 +781,18 @@
               </div>
             </li>
 
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">What are the requirements to run the addin? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  You need a PC (not MAC compatible), Excel 2007 or newer and Windows XP, 7, 8, 8.1, 10 or 11.
-                </p>
-              </div>
-            </li>
-
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Is the addin Mac compatible? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Unfortunately, not for the moment.  The situation is looked at regularly.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Is the addin's license renewed automatically? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Is the cost of the addin refundable? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  No. Exceptionally, if a user terminates employment with the organization that purchased the license, a replacement license may be issued at no cost to the replacement employee.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Is the addin's license renewed automatically? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
                   No. All licenses expire on December 31<sup>st</sup>. At the end of November / beginning of December, users are contacted by email to confirm the renewal of their licenses for the next calendar year. Following confirmation of the renewal, users receive a new addin key valid until the end of the next year.
                 </p>
@@ -725,8 +800,17 @@
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Is the addin useful for non-Canadian actuary? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">Is the addin Mac compatible? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Unfortunately, not for the moment.  The situation is looked at regularly.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-7" class="collapsed">Is the addin useful for non-Canadian actuary? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
                 <p>
                   <b>Yes</b>, the Actuarial Excel Addin allows you to <b>calculate annuity factors</b>, which is universal for all pension actuaries and administrators.
                 </p>
