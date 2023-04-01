@@ -530,12 +530,17 @@ section {
   margin-top: 0;
 }
 
-.hero .btn-watch-video {
-  font-size: 22px;
+.hero .btn-statistics {
+  font-size: 18px;
   transition: 0.5s;
-  margin-top: 35px;
-  margin-left: 0px;
+  margin-top: 10px;
+  margin-left: 40px;
   color: var(--mainColor);
+}
+
+.hero .btn-statistics:hover {
+  color: var(--BGColor);
+  font-weight: bold;
 }
 
 .hero .btn-watch-video i {
@@ -546,9 +551,18 @@ section {
   margin-right: 8px;
 }
 
+.hero .btn-watch-video {
+  font-size: 22px;
+  transition: 0.5s;
+  margin-top: 35px;
+  margin-left: 0px;
+  color: var(--mainColor);
+}
+
 .hero .btn-watch-video:hover {
   color: var(--BGColor);
 }
+
 .hero a.email {
   color: var(--white);
   font-weight: 600;
